@@ -1,5 +1,5 @@
 module.exports = {
-  title: '武宇威的博客',
+  title: 'yuwei的知识库',
   description: '啦啦啦',
   plugins: [
     [
@@ -28,11 +28,19 @@ module.exports = {
             items: [
               {
                 text: '泛型',
-                link: '/guide/'
+                link: '/java/'
               }
             ]
           },
-          { text: 'Japanese', link: '/language/japanese/' }
+          {
+            text: 'Git版本控制',
+            items: [
+              {
+                text: '上传本地文件至GitHub',
+                link: '/git/'
+              }
+            ]
+          },
         ]
       }
     ]

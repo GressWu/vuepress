@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /assets/img/backimg.jpeg
-heroText: 我就是我，不一样的烟火
+heroText: 不要为已消逝之年华叹息，须正视欲匆匆溜走的时光
 tagline: It's not who I am underneath but what I do that defines me.
 actionText: 快速上手 →
 actionLink: /zh/guide/
@@ -16,7 +16,7 @@ features:
 
 ---
 ::: slot footer
-MIT Licensed | Copyright © 2018-present [Evan You](https://github.com/yyx990803)
+MIT Licensed | Copyright © 2022-present [Yuwei Wu](https://github.com/GressWu)
 :::
 
 
