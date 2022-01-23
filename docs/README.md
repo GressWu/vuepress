@@ -1,8 +1,8 @@
 ---
 home: true
-heroImage: /hero.png
-heroText: Hero 标题
-tagline: Hero 副标题
+heroImage: /assets/img/backimg.jpeg
+heroText: 我就是我，不一样的烟火
+tagline: It's not who I am underneath but what I do that defines me.
 actionText: 快速上手 →
 actionLink: /zh/guide/
 features:
