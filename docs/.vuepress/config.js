@@ -29,6 +29,10 @@ module.exports = {
               {
                 text: '泛型',
                 link: '/java/'
+              },
+              {
+                text: '统一请求体与返回体',
+                link: '/java/standardmessage'
               }
             ]
           },

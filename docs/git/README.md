@@ -45,7 +45,7 @@ cat id_rsa.pub
 
 复制HTTPS路径，或者是SSH路径
 
-![image-20220123205030863](C:\Users\Gress\AppData\Roaming\Typora\typora-user-images\image-20220123205030863.png)
+![image-20220123205030863](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220123205030863.png)
 
 * 克隆该仓库
 
