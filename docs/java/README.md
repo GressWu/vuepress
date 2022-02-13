@@ -1,13 +1,10 @@
----
----
+# 泛型
 
-## 泛型
-
-### 什么是泛型
+## 什么是泛型
 
 泛型就是在Java程序编译的时候给预定义的类赋予值的类。
 
-### 为什么要使用泛型
+## 为什么要使用泛型
 
 首先看以下例子
 
@@ -113,7 +110,7 @@ Process finished with exit code 0
 
 ```
 
-### 泛型子类的应用
+## 泛型子类的应用
 
 * 如果父类，子类都是泛型，子类的类型必须与父类一致，且子类可以扩展其他泛型参数。
 
@@ -211,7 +208,7 @@ public class Test {
 }
 ```
 
-### 泛型接口
+## 泛型接口
 
 1.如果实现泛型接口的类是普通类，则必须要指定实现泛型接口的类型，否则默认为Object类型。
 
@@ -292,7 +289,7 @@ This is a Apple
 hah
 ```
 
-### 泛型方法
+## 泛型方法
 
 泛型方法不是泛型成员方法而是泛型的方法
 
@@ -374,7 +371,7 @@ public class Test2 {
 2000
 ```
 
-### 类型通配符
+## 类型通配符
 
 ```java
 package com.yuwei.demo;
@@ -466,7 +463,7 @@ public class Test01 {
 
 
 
-### 类型通配符的上限与下限
+## 类型通配符的上限与下限
 
 方法定义（举例）:
 
@@ -552,7 +549,7 @@ public class Test {
 }
 ```
 
-### 类型擦除
+## 类型擦除
 
 1. 无限制类型擦除
 
@@ -583,7 +580,7 @@ public class Test {
         Erasure2<Integer> integerErasure2 = new Erasure2<>();
         integerErasure2.setT(10);
         Class<? extends Erasure2> aClass = integerErasure2.getClass();
-        //利用发射获取所有的成员变量
+        //利用反射获取所有的成员变量
         Field[] declaredFields = aClass.getDeclaredFields();
         for (Field declaredField : declaredFields) {
             //打印成员变量的类型
@@ -602,7 +599,7 @@ t Object
 
 2. 有限制类型擦除
 
-```
+```java
 package com.yuwei.demo2;
 
 public class Erasure1<T extends Number> {
@@ -618,7 +615,7 @@ public class Erasure1<T extends Number> {
 }
 ```
 
-```
+```java
 Erasure1<Number> numberErasure1 = new Erasure1<>();
 numberErasure1.setT(10);
 Class<? extends Erasure1> aClass1 = numberErasure1.getClass();
@@ -633,3 +630,149 @@ t Number
 ```
 
 会擦除到上限
+
+## 泛型数组
+
+1.申明带泛型的数组
+
+```java
+package com.yuwei.demo3;
+
+import java.util.ArrayList;
+
+public class ArrayTest {
+    public static void main(String[] args) {
+
+        //1.可以申明带泛型的数组引用，但是不能直接创建带泛型的数组对象
+        ArrayList<String>[] strings = new ArrayList[5];
+        //这样不可以
+        //new ArrayList<>[5];
+
+
+        ArrayList<String> strings1 = new ArrayList<>();
+        strings1.add("asd");
+
+        strings[0]=strings1;
+        System.out.println(strings[0].get(0));
+    }
+}
+```
+
+```
+asd
+```
+
+2.申明泛型数组
+
+```java
+package com.yuwei.demo3;
+
+import java.lang.reflect.Array;
+
+public class Fruit<T> {
+   //可以通过Array是newInstance方法创建T[]数组
+    private T[] arrays ;
+
+    /**
+     * 初始化泛型数组
+     * @param clz
+     * @param len
+     */
+    public Fruit(Class<T> clz,int len){
+        arrays = (T[]) Array.newInstance(clz, len);
+    }
+
+    /**
+     * 填充元素
+     * @param index
+     * @param params
+     */
+    public void put(int index,T params){
+        arrays[index]=params;
+    }
+
+    /**
+     * 获取指定索引的泛型元素
+     * @param index
+     * @return
+     */
+    public T get(int index){
+        return arrays[index];
+    }
+
+    public T[] getAll(){
+        return arrays;
+    }
+
+
+}
+```
+
+```java
+package com.yuwei.demo3;
+
+import java.util.Arrays;
+
+public class ArraysTest {
+    public static void main(String[] args) {
+        Fruit<String> stringFruit = new Fruit<>(String.class,3);
+
+        stringFruit.put(0,"香蕉");
+        stringFruit.put(1,"苹果");
+        stringFruit.put(2,"西瓜");
+
+        System.out.println(Arrays.toString(stringFruit.getAll()));
+        System.out.println(stringFruit.get(0));
+    }
+}
+```
+
+```
+[香蕉, 苹果, 西瓜]
+香蕉
+```
+
+## 反射的泛型
+
+```java
+package com.yuwei.demo4;
+
+public class Person {
+    private String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+
+    public Person() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```
+
+```java
+package com.yuwei.demo4;
+
+import java.lang.reflect.Constructor;
+
+public class TestReflect {
+    public static void main(String[] args) throws Exception {
+        //带有泛型的最后构造可以构造出具体的对象类型
+        Class<Person> personClass = Person.class;
+        Constructor<Person> constructor = personClass.getConstructor();
+        Person person = constructor.newInstance();
+		//没有的话，最后返回的是Object类型
+        Class personClass1 = Person.class;
+        Constructor constructor1 = personClass1.getConstructor();
+        Object o = constructor1.newInstance();
+    }
+}
+```

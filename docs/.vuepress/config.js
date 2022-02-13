@@ -18,7 +18,7 @@ module.exports = {
     lastUpdated: '更新时间',
     nav: [
       { text: '首页', link: '/' },
-      { text: '导航', link: '/guide/' },
+      { text: '其他', link: '/other/' },
       {
         text: '计算机技术',
         ariaLabel: 'computer',
@@ -42,6 +42,15 @@ module.exports = {
               {
                 text: '上传本地文件至GitHub',
                 link: '/git/'
+              }
+            ]
+          },
+          {
+            text: '计算机网络',
+            items: [
+              {
+                text: 'RestTemplate的使用',
+                link: '/internet/resttemplate/'
               }
             ]
           },

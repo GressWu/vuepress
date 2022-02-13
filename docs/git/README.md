@@ -1,6 +1,6 @@
-## 上传本地文件至GitHub
+# 上传本地文件至GitHub
 
-### 前期准备
+## 前期准备
 
 1. 配置Git全局名字、邮件
 
@@ -31,7 +31,7 @@ cat id_rsa.pub
 
 ![image-20220123221407368](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220123221407368.png)
 
-### 方法一
+## 方法一
 
 * 登录GitHub创建仓库
 
@@ -69,7 +69,7 @@ cat id_rsa.pub
 
    `git push`
 
-### 方法二
+## 方法二
 
 在要提交的文件夹中执行以下命令
 
