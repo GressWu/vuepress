@@ -1,4 +1,11 @@
-# 泛型
+---
+title: 泛型
+date: 2022-01-13
+categories:
+ - backEnd
+tags:
+ - Java
+---
 
 ## 什么是泛型
 

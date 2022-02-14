@@ -1,4 +1,16 @@
-# SpringBoot统一返回体与统一请求体
+---
+title: SpringBoot统一返回体与统一请求体
+date: 2022-01-26
+categories:
+ - backEnd
+tags:
+ - Java
+---
+
+:::tip
+项目中方便不同系统进行规范化的数据交互
+:::
+
 
 ## 需求背景
 
