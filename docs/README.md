@@ -1,6 +1,6 @@
 ---
 home: true
-# heroImage: /assets/img/backimg.jpeg
+#heroImage: /assets/img/moon.jpeg
 heroText: 坐在弯弯的月牙上悠荡，仿佛一切都是那么宁静美好
 # heroImageStyle: {
 #   maxHeight: '200px',
@@ -14,6 +14,3 @@ heroText: 坐在弯弯的月牙上悠荡，仿佛一切都是那么宁静美好
 ::: slot footer
 MIT Licensed | Copyright © 2022-present [Yuwei Wu](https://github.com/GressWu)
 :::
-
-
-

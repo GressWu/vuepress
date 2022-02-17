@@ -7,6 +7,25 @@ module.exports = {
     ],
     [
       '@vuepress/nprogress'
+    ],
+    [
+      '@vuepress-reco/vuepress-plugin-bgm-player',
+      {
+        audios: [
+          {
+            name: '一路向北',
+            artist: '周杰伦',
+            url: 'https://www.ytmp3.cn/down/69847.mp3',
+            cover: 'https://t15.baidu.com/it/u=3058534094,3799576610&fm=179&app=42&size=w931&n=0&f=JPEG&fmt=auto?s=2F113BC89E72B5F554EC4D1E030050D2&sec=1645203600&t=d2730f587fd0ad05c02aeafeecaebec6'
+          }
+        ] ,
+        // 是否默认缩小
+        autoShrink: true ,
+        // 缩小时缩为哪种模式
+        shrinkMode: 'float',
+        // 悬浮窗样式
+        floatStyle:{ bottom: '10px', 'z-index': '999999' }
+      }
     ]
   ],
   head: [
