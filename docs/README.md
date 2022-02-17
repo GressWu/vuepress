@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /assets/img/backimg.jpeg
-heroText: 不要为已消逝之年华叹息，须正视欲匆匆溜走的时光
+heroText: 坐在弯弯的月牙上悠荡，仿佛一切都是那么宁静美好
 # heroImageStyle: {
 #   maxHeight: '200px',
 #   display: block,

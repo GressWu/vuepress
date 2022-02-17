@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'yuwei的知识库',
+  title: '月牙弯弯',
   description: '路上见识世界，途中认识自己',
   plugins: [
     [
@@ -26,10 +26,10 @@ module.exports = {
         location: 3,     // 在导航栏菜单中所占的位置，默认3
         text: 'Tag'      // 默认文案 “标签”
       },
-      socialLinks: [     // 信息栏展示社交信息
-        { icon: 'reco-github', link: 'https://github.com/recoluan' },
-        { icon: 'reco-npm', link: 'https://www.npmjs.com/~reco_luan' }
-      ]
+      // socialLinks: [     // 信息栏展示社交信息
+      //   { icon: 'reco-github', link: 'https://github.com/recoluan' },
+      //   { icon: 'reco-npm', link: 'https://www.npmjs.com/~reco_luan' }
+      // ]
     },
     //logo: '/assets/img/hero.png',
     subSidebar: 'auto',
@@ -71,6 +71,15 @@ module.exports = {
               {
                 text: 'RestTemplate的使用',
                 link: '/internet/resttemplate/'
+              }
+            ]
+          },
+          {
+            text: '前端知识',
+            items: [
+              {
+                text: 'VuePress自定义页面',
+                link: '/frontend/vuepresscustom/'
               }
             ]
           },

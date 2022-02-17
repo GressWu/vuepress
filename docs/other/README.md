@@ -7,8 +7,6 @@ tags:
  - English
 ---
 
-## 计算机英语
-
 endpoint  n. 端点（具体语境中指代不同，有可能是端口、交互双方、网址等意思）
 
 synchronous adj. 同步的
