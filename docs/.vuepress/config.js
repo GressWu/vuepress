@@ -15,7 +15,7 @@ module.exports = {
           {
             name: '一路向北',
             artist: '周杰伦',
-            url: 'https://www.ytmp3.cn/down/69847.mp3',
+            url: 'https://www.ytmp3.cn/down/49201.mp3',
             cover: 'https://t15.baidu.com/it/u=3058534094,3799576610&fm=179&app=42&size=w931&n=0&f=JPEG&fmt=auto?s=2F113BC89E72B5F554EC4D1E030050D2&sec=1645203600&t=d2730f587fd0ad05c02aeafeecaebec6'
           }
         ] ,
@@ -57,7 +57,31 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
-      { text: '其他', link: '/other/' },
+      { text: '其他',
+        ariaLabel: 'other',
+        items: [
+          {
+            text: '语言',
+            items: [
+              {
+                text: '计算机英语',
+                link: '/language/computerenglish'
+              }
+            ]
+          },
+          {
+            text: '影视',
+            items: [
+              {
+                text: '《生死停留》-选题新颖的悬疑片',
+                link: '/video/stay'
+              }
+            ]
+          }
+         
+        ]
+            
+      },
       {
         text: '计算机技术',
         ariaLabel: 'computer',
