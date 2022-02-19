@@ -77,6 +77,15 @@ module.exports = {
                 link: '/video/stay'
               }
             ]
+          },
+          {
+            text: '读书',
+            items: [
+              {
+                text: '2021读书分享',
+                link: '/read/2021report'
+              }
+            ]
           }
          
         ]
