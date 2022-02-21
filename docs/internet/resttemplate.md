@@ -5,6 +5,7 @@ categories:
  - backEnd
 tags:
  - Java
+ - internet
 ---
 
 RestTemplete是一个同步Web Http客户端请求模板工具

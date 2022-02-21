@@ -109,6 +109,19 @@ module.exports = {
             ]
           },
           {
+            text: '面试知识点',
+            items: [
+              {
+                text: '@Component与@Bean的区别',
+                link: '/interview/cptandbean'
+              },
+              {
+                text: '控制反转(IOC)与依赖注入(DI)',
+                link: '/interview/iocanddi'
+              }
+            ]
+          },
+          {
             text: 'Git版本控制',
             items: [
               {
