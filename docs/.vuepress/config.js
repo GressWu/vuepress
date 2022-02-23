@@ -86,7 +86,16 @@ module.exports = {
                 link: '/read/2021report'
               }
             ]
-          }
+          },
+          {
+            text: '随笔',
+            items: [
+              {
+                text: '《暗淡蓝点》',
+                link: '/essay/thedarkbluepoint'
+              }
+            ]
+          },
          
         ]
             
