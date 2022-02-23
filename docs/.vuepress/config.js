@@ -13,9 +13,9 @@ module.exports = {
       {
         audios: [
           {
-            name: '一路向北',
+            name: '搁浅',
             artist: '周杰伦',
-            url: 'https://www.ytmp3.cn/down/49201.mp3',
+            url: 'http://www.ytmp3.cn/down/69839.mp3',
             cover: 'https://t15.baidu.com/it/u=3058534094,3799576610&fm=179&app=42&size=w931&n=0&f=JPEG&fmt=auto?s=2F113BC89E72B5F554EC4D1E030050D2&sec=1645203600&t=d2730f587fd0ad05c02aeafeecaebec6'
           }
         ] ,
@@ -105,7 +105,15 @@ module.exports = {
               {
                 text: '统一请求体与返回体',
                 link: '/java/standardmessage'
-              }
+              },
+              {
+                text: '正则表达式详解',
+                link: '/java/regexp/info'
+              },
+              {
+                text: '正则表达式案例',
+                link: '/java/regexp/example'
+              },
             ]
           },
           {
@@ -145,6 +153,15 @@ module.exports = {
               {
                 text: 'VuePress自定义页面',
                 link: '/frontend/vuepresscustom/'
+              }
+            ]
+          },
+          {
+            text: '编译器',
+            items: [
+              {
+                text: 'vscode连接远程服务器',
+                link: '/ide/vscodessh/'
               }
             ]
           },
