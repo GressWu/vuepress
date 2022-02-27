@@ -93,6 +93,10 @@ module.exports = {
               {
                 text: '《暗淡蓝点》',
                 link: '/essay/thedarkbluepoint'
+              },
+              {
+                text: '普京-铁汉柔情',
+                link: '/essay/pujing'
               }
             ]
           },

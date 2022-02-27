@@ -23,3 +23,7 @@ exposes v.暴露
 
 Retrieves v. 取回
 
+Rendering v.n. 渲染
+
+
+
