@@ -127,6 +127,10 @@ module.exports = {
                 text: '正则表达式案例',
                 link: '/java/regexp/example'
               },
+              {
+                text: 'Optional类的应用',
+                link: '/java/optional'
+              },
             ]
           },
           {
