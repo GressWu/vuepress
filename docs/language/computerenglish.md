@@ -25,5 +25,7 @@ Retrieves v. 取回
 
 Rendering v.n. 渲染
 
+aborted adj. 夭折的，失败的
 
+omitted adj. 省略的
 

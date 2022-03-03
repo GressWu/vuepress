@@ -97,6 +97,10 @@ module.exports = {
               {
                 text: '普京-铁汉柔情',
                 link: '/essay/pujing'
+              },
+              {
+                text: '别让任何人打乱你的生活节奏',
+                link: '/essay/lifebelongstoyourself'
               }
             ]
           },
