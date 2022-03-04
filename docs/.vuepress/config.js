@@ -147,6 +147,10 @@ module.exports = {
               {
                 text: '控制反转(IOC)与依赖注入(DI)',
                 link: '/interview/iocanddi'
+              },
+              {
+                text: 'Spring中注册Bean的方式',
+                link: '/interview/initbean'
               }
             ]
           },
