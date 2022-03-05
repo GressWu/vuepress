@@ -160,6 +160,10 @@ module.exports = {
               {
                 text: '上传本地文件至GitHub',
                 link: '/git/'
+              },
+              {
+                text: 'git基本操作',
+                link: '/git/basic'
               }
             ]
           },
