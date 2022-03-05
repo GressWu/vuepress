@@ -13,10 +13,10 @@ module.exports = {
       {
         audios: [
           {
-            name: '搁浅',
-            artist: '周杰伦',
-            url: 'http://www.ytmp3.cn/down/69839.mp3',
-            cover: 'https://t15.baidu.com/it/u=3058534094,3799576610&fm=179&app=42&size=w931&n=0&f=JPEG&fmt=auto?s=2F113BC89E72B5F554EC4D1E030050D2&sec=1645203600&t=d2730f587fd0ad05c02aeafeecaebec6'
+            name: 'А зори здесь тихие-тихие',
+            artist: 'Lube',
+            url: 'https://sharefs.ali.kugou.com/202203052207/d73ffd83a3d4ae1b76890f15ff185c47/KGTX/CLTX001/9684b762d5654255d8e04af02540e1c1.mp3',
+            cover: 'http://imge.kugou.com/stdmusic/150/20190215/20190215054604117975.jpg'
           }
         ] ,
         // 是否默认缩小
