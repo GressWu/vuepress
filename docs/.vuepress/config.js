@@ -164,6 +164,10 @@ module.exports = {
               {
                 text: 'git基本操作',
                 link: '/git/basic'
+              },
+              {
+                text: 'git回退版本',
+                link: '/git/gitback'
               }
             ]
           },
