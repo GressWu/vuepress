@@ -15,7 +15,7 @@ module.exports = {
           {
             name: 'А зори здесь тихие-тихие',
             artist: 'Lube',
-            url: 'https://sharefs.ali.kugou.com/202203052207/d73ffd83a3d4ae1b76890f15ff185c47/KGTX/CLTX001/9684b762d5654255d8e04af02540e1c1.mp3',
+            url: 'https://sharefs.ali.kugou.com/202203102229/7f6620aa54826b31c41a07120a7b7bd4/KGTX/CLTX001/9684b762d5654255d8e04af02540e1c1.mp3',
             cover: 'http://imge.kugou.com/stdmusic/150/20190215/20190215054604117975.jpg'
           }
         ] ,
@@ -152,6 +152,19 @@ module.exports = {
                 text: 'Spring中注册Bean的方式',
                 link: '/interview/initbean'
               }
+            ]
+          },
+          {
+            text: 'Spring MVC',
+            items: [
+              {
+                text: '什么是Spring MVC',
+                link: '/springmvc/introduce'
+              },
+              {
+                text: 'Servlet简介',
+                link: '/springmvc/servlet'
+              },
             ]
           },
           {
