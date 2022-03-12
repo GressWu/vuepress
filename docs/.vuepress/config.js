@@ -15,7 +15,7 @@ module.exports = {
           {
             name: 'А зори здесь тихие-тихие',
             artist: 'Lube',
-            url: 'https://sharefs.ali.kugou.com/202203102229/7f6620aa54826b31c41a07120a7b7bd4/KGTX/CLTX001/9684b762d5654255d8e04af02540e1c1.mp3',
+            url: 'http://rr01.sycdn.kuwo.cn/57dda7a980c13e8aaaf68d50a7941745/622cad66/resource/n1/53/57/3244006272.mp3',
             cover: 'http://imge.kugou.com/stdmusic/150/20190215/20190215054604117975.jpg'
           }
         ] ,
@@ -135,6 +135,19 @@ module.exports = {
                 text: 'Optional类的应用',
                 link: '/java/optional'
               },
+              {
+                text: 'crontab与cron语法规则',
+                link: '/java/cron'
+              },
+              {
+                text: 'Java序列化与反序列化',
+                link: '/java/serializable'
+              },
+              {
+                text: 'enum枚举类的使用',
+                link: '/java/enum'
+              }
+              
             ]
           },
           {
@@ -181,6 +194,23 @@ module.exports = {
               {
                 text: 'git回退版本',
                 link: '/git/gitback'
+              }
+            ]
+          },
+          {
+            text: '设计模式',
+            items: [
+              {
+                text: '设计模式类型',
+                link: '/designpattern/dptype'
+              },
+              {
+                text: '设计模式七大原则',
+                link: '/designpattern/dpprinciple'
+              },
+              {
+                text: '《大话设计模式》—— 简单工厂模式',
+                link: '/designpattern/factorypattern'
               }
             ]
           },
