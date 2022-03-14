@@ -146,6 +146,10 @@ module.exports = {
               {
                 text: 'enum枚举类的使用',
                 link: '/java/enum'
+              },
+              {
+                text: 'Mybatis-Plus用法总结',
+                link: '/java/mybatisplus'
               }
               
             ]
@@ -177,6 +181,10 @@ module.exports = {
               {
                 text: 'Servlet简介',
                 link: '/springmvc/servlet'
+              },
+              {
+                text: 'SpringMVC简单使用',
+                link: '/springmvc/simpleuse'
               },
             ]
           },
