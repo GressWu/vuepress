@@ -15,7 +15,7 @@ module.exports = {
           {
             name: 'А зори здесь тихие-тихие',
             artist: 'Lube',
-            url: 'http://rr01.sycdn.kuwo.cn/57dda7a980c13e8aaaf68d50a7941745/622cad66/resource/n1/53/57/3244006272.mp3',
+            url: '/assets/music/bgm.mp3',
             cover: 'http://imge.kugou.com/stdmusic/150/20190215/20190215054604117975.jpg'
           }
         ] ,
@@ -185,6 +185,19 @@ module.exports = {
               {
                 text: 'SpringMVC简单使用',
                 link: '/springmvc/simpleuse'
+              },
+            ]
+          },
+          {
+            text: 'Spring Boot',
+            items: [
+              {
+                text: 'SpringBoot解决跨域问题',
+                link: '/springboot/crossorgin'
+              },
+              {
+                text: 'SpringBoot事务处理Transactional',
+                link: '/springboot/tansactional'
               },
             ]
           },
