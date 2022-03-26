@@ -215,6 +215,14 @@ module.exports = {
               {
                 text: 'git回退版本',
                 link: '/git/gitback'
+              },
+              {
+                text: 'git分支与工作流',
+                link: '/git/gitbranch'
+              },
+              {
+                text: 'git stash与git cherry-pick',
+                link: '/git/gitstash'
               }
             ]
           },
