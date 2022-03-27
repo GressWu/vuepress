@@ -186,6 +186,10 @@ module.exports = {
                 text: 'SpringMVC简单使用',
                 link: '/springmvc/simpleuse'
               },
+              {
+                text: 'SpringMVC @RequestMapping注解',
+                link: '/springmvc/requestmapping'
+              }
             ]
           },
           {
