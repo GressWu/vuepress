@@ -203,6 +203,10 @@ module.exports = {
                 text: 'SpringBoot事务处理Transactional',
                 link: '/springboot/tansactional'
               },
+              {
+                text: 'SpringBoot读取配置文件的五种方式',
+                link: '/springboot/property'
+              },
             ]
           },
           {
