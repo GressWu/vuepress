@@ -189,7 +189,15 @@ module.exports = {
               {
                 text: 'SpringMVC @RequestMapping注解',
                 link: '/springmvc/requestmapping'
-              }
+              },
+              {
+                text: 'SpringMVC取值与返回值',
+                link: '/springmvc/requestandresponse'
+              },
+              {
+                text: 'SpringMVC上传与下载功能',
+                link: '/springmvc/upanddown'
+              },
             ]
           },
           {
@@ -275,6 +283,10 @@ module.exports = {
               {
                 text: 'vscode连接远程服务器',
                 link: '/ide/vscodessh/'
+              },
+              {
+                text: 'Idea快捷键',
+                link: '/ide/ideakey/'
               }
             ]
           },

@@ -5,6 +5,7 @@ categories:
  - language
 tags:
  - English
+sticky: 2
 ---
 
 endpoint  n. 端点（具体语境中指代不同，有可能是端口、交互双方、网址等意思）
@@ -28,4 +29,10 @@ Rendering v.n. 渲染
 aborted adj. 夭折的，失败的
 
 omitted adj. 省略的
+
+wrapper n. 包装器
+
+converter n. 转换器
+
+Interceptor n. 过滤器
 

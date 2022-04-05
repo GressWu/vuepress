@@ -51,7 +51,7 @@ RequestMapping注解可以写在类和方法上
 
 写在**方法上：**设置映射请求的具体信息
 
-如写在类上的路径为@RequestMapping(/test)，卸载方法上的路径为@RequestMapping(/getresult)，那么客户端访问该接口方法的路径则为/test/getresult
+如写在类上的路径为`@RequestMapping("/test")`，写在方法上的路径为`@RequestMapping("/getresult")`，那么客户端访问该接口方法的路径则为`/test/getresult`
 
 ## 注解的属性
 
@@ -133,7 +133,7 @@ RequestMethod[] method() default {};
 
 params是一个字符串类型的数组，可以通过四种表达式设置请求参数和请求参数映射的匹配关系
 
- 	1. "param:"要求请求映射必须携带param请求参数，如下面例子代表请求参数必须要带上username参数。
+1. "param:"要求请求映射必须携带param请求参数，如下面例子代表请求参数必须要带上username参数。
 
 如果直接访问`http://localhost:8080/SpringMVC/`，会报以下**错误400**
 
@@ -186,3 +186,44 @@ headers是一个字符串类型的数组，可以通过四种表达式设置请�
 2. "!headers":要求请求映射必须不能携带headers请求头
 3. "headers=value" : 要求请求映射必须携带headers请求头，并且请求头headers=value
 4. "headers!=value" : 要求请求映射必须携带headers请求头，并且请求头headers!=value
+
+## 支持Ant风格
+
+ SpringMVC的value支持ant风格
+
+* `?`匹配单个字符
+
+```java
+    @GetMapping("/a?/testant")
+    public String testAnt(){
+        return env.getProperty("server.port");
+    }
+```
+
+例如可以访问`http://localhost:8089/aa/testant`，`http://localhost:8089/a1/testant`
+
+但是不能访问`/` `?` 这样的特殊符号
+
+* `*`匹配多个字符
+
+```java
+ @GetMapping("/a*/testant")
+    public String testAnt(){
+        return env.getProperty("server.port");
+    }
+```
+
+例如可以访问`http://localhost:8089/aa4333/testant`，`http://localhost:8089/a333/testant`
+
+* `**`匹配多级目录
+
+```java
+    @GetMapping("/**/testant")
+    public String testAnt(){
+        return env.getProperty("server.port");
+    }
+```
+
+例如可以访问`http://localhost:8089/aa/bb/testant`，`http://localhost:8089/aa/bb/55/testant`
+
+**注**：在使用`**`时，只能使用`/**/XXX`的形式。如果使用`/a**a/testant`将不会匹配多级目录，而是相当于匹配两个单个`*`
