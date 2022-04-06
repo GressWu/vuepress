@@ -198,6 +198,14 @@ module.exports = {
                 text: 'SpringMVC上传与下载功能',
                 link: '/springmvc/upanddown'
               },
+              {
+                text: 'SpringMVC异常处理',
+                link: '/springmvc/exception'
+              },
+              {
+                text: 'SpringMVC注解配置',
+                link: '/springmvc/annotion'
+              },
             ]
           },
           {
