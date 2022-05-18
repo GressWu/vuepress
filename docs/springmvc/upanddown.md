@@ -9,7 +9,7 @@ tags:
 
 ## 前期准备
 
-需要在`DispatcherServlet`配置文件中配置MultipartResolver处理器
+需要在`SpringMVC`配置文件中配置MultipartResolver处理器
 
 ```xml
     <!-- SpringMVC上传文件时，需要配置MultipartResolver处理器 -->
@@ -18,6 +18,15 @@ tags:
         <property name="maxUploadSize" value="10485760000" />
         <property name="maxInMemorySize" value="40960" />
     </bean>
+```
+pom文件中也需加入依赖
+
+```xml
+ <dependency>
+       <groupId>commons-fileupload</groupId>
+       <artifactId>commons-fileupload</artifactId>
+       <version>1.3.1</version>
+ </dependency>
 ```
 
 ## 上传文件

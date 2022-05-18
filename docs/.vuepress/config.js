@@ -223,6 +223,10 @@ module.exports = {
                 text: 'SpringBoot读取配置文件的五种方式',
                 link: '/springboot/property'
               },
+              {
+                text: 'SpringBoot validation参数校验',
+                link: '/springboot/validation'
+              },
             ]
           },
           {
