@@ -299,6 +299,10 @@ module.exports = {
               {
                 text: 'Idea快捷键',
                 link: '/ide/ideakey/'
+              },
+              {
+                text: 'Typora设置阿里云图床',
+                link: '/ide/typoraaliyun/'
               }
             ]
           },
