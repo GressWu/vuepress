@@ -227,6 +227,10 @@ module.exports = {
                 text: 'SpringBoot validation参数校验',
                 link: '/springboot/validation'
               },
+              {
+                text: 'SpringBoot h2数据库的使用',
+                link: '/springboot/h2database'
+              },
             ]
           },
           {
