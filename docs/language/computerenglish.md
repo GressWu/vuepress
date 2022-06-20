@@ -36,3 +36,23 @@ converter n. 转换器
 
 Interceptor n. 过滤器
 
+robust adj. 健壮的
+
+optimization n.最佳化
+
+leverage n.杠杆 影响力
+
+scalable adj. 可扩展的
+
+accommodate v. 提供，适应
+
+proliferation n. 激增
+
+iteration n. 迭代
+
+layers n. 底层
+
+stereotype n. 模板
+
+
+
