@@ -72,3 +72,12 @@ int r = 0/10;.try
 将光标移至方法参数区，`ctrl + p`查看所需参数
 
 ![image-20220405163936982](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220405163936982.png)
+
+## 切换Tab页
+`ctrl + shift + tab`
+
+## 大小写转换
+`ctrl + shift + u`
+
+## 清楚多余jar包
+`ctrl + alt + o`
