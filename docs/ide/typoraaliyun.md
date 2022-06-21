@@ -24,8 +24,7 @@ PicGo路径为PicGo.exe的绝对路径
 
 ![image-20220603200110758](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220603200110758.png)
 
-![image-20220603200008915](C:\Users\11629\AppData\Roaming\Typora\typora-user-images\image-20220603200008915.png)
-
+![image-20220603200008915](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220603200008915.png)
 点击头像，选在AccessKey选项，获取Id与密钥。
 
 ### 设置Buckect相关信息
