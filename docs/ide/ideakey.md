@@ -79,5 +79,5 @@ int r = 0/10;.try
 ## 大小写转换
 `ctrl + shift + u`
 
-## 清楚多余jar包
+## 清除多余jar包
 `ctrl + alt + o`

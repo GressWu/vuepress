@@ -54,5 +54,7 @@ layers n. 底层
 
 stereotype n. 模板
 
+widget n.控件
+
 
 

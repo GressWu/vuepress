@@ -314,6 +314,15 @@ module.exports = {
               }
             ]
           },
+          {
+            text: 'SpringBatch',
+            items: [
+              {
+                text: 'SpringBatch所需准备',
+                link: '/springbatch/springbatch/'
+              }
+            ]
+          },
         ]
       }
     ]
