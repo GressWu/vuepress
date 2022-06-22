@@ -1,55 +1,18 @@
+const pluginsConfig = require("./config/pluginsConf")
+const headConfig = require("./config/headConf")
+const blogConfig = require("./config/blogConf")
+
 module.exports = {
   title: '月牙弯弯',
   description: '路上见识世界，途中认识自己',
-  plugins: [
-    [
-      '@vuepress/back-to-top'
-    ],
-    [
-      '@vuepress/nprogress'
-    ],
-    [
-      '@vuepress-reco/vuepress-plugin-bgm-player',
-      {
-        audios: [
-          {
-            name: 'А зори здесь тихие-тихие',
-            artist: 'Lube',
-            url: '/assets/music/bgm.mp3',
-            cover: 'http://imge.kugou.com/stdmusic/150/20190215/20190215054604117975.jpg'
-          }
-        ] ,
-        // 是否默认缩小
-        autoShrink: true ,
-        // 缩小时缩为哪种模式
-        shrinkMode: 'float',
-        // 悬浮窗样式
-        floatStyle:{ bottom: '10px', 'z-index': '999999' }
-      }
-    ]
-  ],
-  head: [
-    ['link', { rel: 'icon', href: '/assetes/img/icon.png' }]
-  ],
+  plugins: pluginsConfig,
+  head: headConfig,
   theme: 'reco',
   themeConfig: {
     author: 'YuWei Wu',
     authorAvatar: '/assets/img/rabbit.jpeg',
     type: 'blog',
-    blogConfig: {
-      category: {
-        location: 2,     // 在导航栏菜单中所占的位置，默认2
-        text: 'Category' // 默认文案 “分类”
-      },
-      tag: {
-        location: 3,     // 在导航栏菜单中所占的位置，默认3
-        text: 'Tag'      // 默认文案 “标签”
-      },
-      // socialLinks: [     // 信息栏展示社交信息
-      //   { icon: 'reco-github', link: 'https://github.com/recoluan' },
-      //   { icon: 'reco-npm', link: 'https://www.npmjs.com/~reco_luan' }
-      // ]
-    },
+    blogConfig: blogConfig,
     //logo: '/assets/img/hero.png',
     subSidebar: 'auto',
    // sidebar: 'auto',
