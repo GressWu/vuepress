@@ -150,6 +150,10 @@ module.exports = {
               {
                 text: 'Mybatis-Plus用法总结',
                 link: '/java/mybatisplus'
+              },
+              {
+                text: 'BigDecimal常见问题',
+                link: '/java/bigdecimal'
               }
               
             ]
