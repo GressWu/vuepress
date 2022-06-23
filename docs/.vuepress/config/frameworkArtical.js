@@ -70,6 +70,10 @@ module.exports = {
                 {
                     text: 'SpringBatch所需准备',
                     link: '/springbatch/springbatch/'
+                },
+                {
+                    text: 'SpringBatch核心API',
+                    link: '/springbatch/springbatchcoreapi/'
                 }
             ]
         },
