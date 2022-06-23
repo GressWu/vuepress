@@ -45,6 +45,10 @@ module.exports = {
                 {
                     text: 'BigDecimal常见问题',
                     link: '/java/bigdecimal'
+                },
+                {
+                    text: 'JWT简介及简单使用',
+                    link: '/java/jwt'
                 }
             ]
         }

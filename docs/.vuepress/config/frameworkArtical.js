@@ -77,6 +77,23 @@ module.exports = {
                 }
             ]
         },
+        {
+            text: 'Spring',
+            items: [
+                {
+                    text: 'Spring IOC与DI',
+                    link: '/spring/springioc/'
+                },
+                {
+                    text: '自动注入与Spring注解',
+                    link: '/spring/springauto/'
+                },
+                {
+                    text: 'SpringAop',
+                    link: '/spring/springaop/'
+                }
+            ]
+        },
     ]
 
 

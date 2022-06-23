@@ -67,7 +67,11 @@ module.exports = {
                 {
                     text: 'RestTemplate的使用',
                     link: '/internet/resttemplate/'
-                }
+                },
+                {
+                    text: 'Java网络编程',
+                    link: '/internet/javainternet/'
+                },
             ]
         },
         {
