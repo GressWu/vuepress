@@ -1,6 +1,6 @@
 ---
 title: SpringMVC异常处理
-date: 2022-04-6
+date: 2022-04-06
 categories:
  - backEnd
 tags:
