@@ -49,7 +49,28 @@ module.exports = {
                 {
                     text: 'JWT简介及简单使用',
                     link: '/java/jwt'
-                }
+                },
+                {
+                    text: 'Stream流与lambda表达式',
+                    link: '/java/stream'
+                },
+                {
+                    text: 'IO流的使用',
+                    link: '/java/io'
+                },
+                {
+                    text: '注解的使用',
+                    link: '/java/annotation'
+                },
+                {
+                    text: '反射技术',
+                    link: '/java/reflection'
+                },
+                {
+                    text: 'Java内存分析',
+                    link: '/java/jmm'
+                },
+
             ]
         }
     ]

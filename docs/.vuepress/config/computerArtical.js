@@ -97,7 +97,11 @@ module.exports = {
                 {
                     text: 'Typora设置阿里云图床',
                     link: '/ide/typoraaliyun/'
-                }
+                },
+                {
+                    text: 'markdown画图',
+                    link: '/ide/markdownpainting/'
+                },
             ]
         },
     ]
