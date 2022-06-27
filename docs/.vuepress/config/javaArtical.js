@@ -74,6 +74,10 @@ module.exports = {
                     text: 'StringJoiner的使用',
                     link: '/java/stringjoiner'
                 },
+                {
+                    text: 'Java深拷贝与浅拷贝',
+                    link: '/java/javacopy'
+                },
 
             ]
         }
