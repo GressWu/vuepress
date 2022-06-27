@@ -19,7 +19,7 @@ tags:
 
 以星期为例
 
-```
+```java
 public enum WeekDay {
 
 }
@@ -31,7 +31,7 @@ public enum WeekDay {
 
 枚举类Weekday.java
 
-```
+```java
 public enum WeekDay {
     Monday,
     Tuesday,
@@ -45,7 +45,7 @@ public enum WeekDay {
 
 测试类test.java
 
-```
+```java
 public class test {
     public static void main(String[] args) {
         System.out.println(WeekDay.Friday);
@@ -59,7 +59,7 @@ public class test {
 
 枚举类Weekday.java
 
-```
+```java
 public enum WeekDay {
 
     Monday("1","星期一"),								      //相当于利用底下的构造函数构造了一个id为1，name为星期一的对象Mondey
@@ -128,7 +128,7 @@ public enum WeekDay {
 
 测试类test.java
 
-```
+```java
 public class test {
     public static void main(String[] args) {
         System.out.println(WeekDay.Friday.id);			 //静态变量，类可以直接调用
@@ -159,7 +159,7 @@ values(), ordinal() 和 valueOf() 方法位于 java.lang.Enum 类中：
 
 实例：
 
-```
+```java
 enum Color
 {
     RED, GREEN, BLUE;

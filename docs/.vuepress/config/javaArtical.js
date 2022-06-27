@@ -70,6 +70,10 @@ module.exports = {
                     text: 'Java内存分析',
                     link: '/java/jmm'
                 },
+                {
+                    text: 'StringJoiner的使用',
+                    link: '/java/stringjoiner'
+                },
 
             ]
         }
