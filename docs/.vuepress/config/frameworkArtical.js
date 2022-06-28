@@ -74,7 +74,11 @@ module.exports = {
                 {
                     text: 'SpringBatch核心API',
                     link: '/springbatch/springbatchcoreapi/'
-                }
+                },
+                {
+                    text: 'SpringBatch输入流',
+                    link: '/springbatch/springbatchitemreader/'
+                },
             ]
         },
         {

@@ -92,7 +92,7 @@ public enum WeekDay {
                 || Sunday.id.equals(id);
     }
      /**
-     * 判断当前输入的参数值是否是枚举的一个值
+     * 根据name获取Id
      *
      * @param id
      * @return
@@ -108,7 +108,7 @@ public enum WeekDay {
     }
 
     /**
-     * 判断当前输入的参数值是否是枚举的一个值
+     * 根据Id获取name
      *
      * @param name
      * @return
