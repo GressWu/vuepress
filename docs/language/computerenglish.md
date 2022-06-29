@@ -56,5 +56,9 @@ stereotype n. 模板
 
 widget n.控件
 
+Flat File n.
 
+A flat file, also known as a text database, is a type of database that stores data in a plain text format. Flat file databases were developed and implemented in the early 1970s by IBM.
+
+suspend v.挂起
 
