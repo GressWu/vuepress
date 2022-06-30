@@ -102,6 +102,10 @@ module.exports = {
                     text: 'markdown画图',
                     link: '/ide/markdownpainting/'
                 },
+                {
+                    text: 'Idea断点调试技巧',
+                    link: '/ide/breakpoint/'
+                }
             ]
         },
     ]

@@ -62,3 +62,7 @@ A flat file, also known as a text database, is a type of database that stores da
 
 suspend v.挂起
 
+mute v. 静音、沉默
+
+resume v. 恢复
+
