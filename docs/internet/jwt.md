@@ -53,7 +53,7 @@ alg：算法名称
 * signature
 
 ```
-String encode = base64(header)+"."+base64(signature)
+String encode = base64(header)+"."+base64(payload)
 Strng signature = sha256("encode",signatureKey)
 ```
 

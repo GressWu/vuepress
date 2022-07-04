@@ -72,6 +72,10 @@ module.exports = {
                     text: 'Java网络编程',
                     link: '/internet/javainternet/'
                 },
+                {
+                    text: 'Jwt的简单使用',
+                    link: '/internet/jwt/'                    
+                }
             ]
         },
         {

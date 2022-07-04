@@ -47,10 +47,6 @@ module.exports = {
                     link: '/java/bigdecimal'
                 },
                 {
-                    text: 'JWT简介及简单使用',
-                    link: '/java/jwt'
-                },
-                {
                     text: 'Stream流与lambda表达式',
                     link: '/java/stream'
                 },
