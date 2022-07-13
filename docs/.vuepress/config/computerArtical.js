@@ -112,6 +112,15 @@ module.exports = {
                 }
             ]
         },
+        {
+            text: 'UML建模语言',
+            items: [
+                {
+                    text: 'UML简介',
+                    link: '/uml/umlintroduce/'
+                }
+            ]
+        },
     ]
 }
 
