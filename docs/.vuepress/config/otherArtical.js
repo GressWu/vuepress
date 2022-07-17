@@ -46,6 +46,15 @@ module.exports = {
         }
       ]
     },
+    {
+      text: '游戏',
+      items: [
+        {
+          text: '《古墓丽影》-高开低走的冒险游戏',
+          link: '/game/tombraider'
+        }
+      ]
+    },
 
   ]
 
