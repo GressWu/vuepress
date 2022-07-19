@@ -5,7 +5,7 @@ categories:
  - language
 tags:
  - English
-sticky: 2
+sticky: 3
 ---
 
 endpoint  n. 端点（具体语境中指代不同，有可能是端口、交互双方、网址等意思）
