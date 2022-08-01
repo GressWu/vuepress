@@ -116,7 +116,7 @@ module.exports = {
             text: 'UML建模语言',
             items: [
                 {
-                    text: 'UML简介',
+                    text: 'UML统一建模语言',
                     link: '/uml/umlintroduce/'
                 }
             ]

@@ -74,6 +74,10 @@ module.exports = {
                     text: 'Java深拷贝与浅拷贝',
                     link: '/java/javacopy'
                 },
+                {
+                    text: 'Java特殊字符转义',
+                    link: '/java/specialchar'
+                }
 
             ]
         }
