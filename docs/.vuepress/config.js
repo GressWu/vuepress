@@ -3,6 +3,7 @@ const headConfig = require("./config/headConf")
 const blogConfig = require("./config/blogConf")
 const otherArtical = require("./config/otherArtical")
 const javaArtical = require("./config/javaArtical")
+const databaseArtical = require("./config/databaseArtical")
 const frameworkArtical = require("./config/frameworkArtical")
 const computerArtical = require("./config/computerArtical")
 
@@ -27,6 +28,7 @@ module.exports = {
       otherArtical,
       javaArtical,
       frameworkArtical,
+      databaseArtical,
       computerArtical
     ]
   }
