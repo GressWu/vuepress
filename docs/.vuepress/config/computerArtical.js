@@ -121,6 +121,15 @@ module.exports = {
                 }
             ]
         },
+        {
+            text: '计算机组成原理',
+            items: [
+                {
+                    text: '计算机进制计算',
+                    link: '/computerbasic/compute/'
+                }
+            ]
+        },
     ]
 }
 

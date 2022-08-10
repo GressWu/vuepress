@@ -115,6 +115,21 @@ public interface Fly {
 
 ## 抽象类
 
+抽象类或者抽象方法斜体表示
+
+```java
+public abstract class Animal{
+	public String name;
+	public String address;
+	public void eat(){
+		System.out.println("吃饭");
+	}
+	public abstract sleep();
+}
+```
+
+![image-20220810210137826](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220810210137826.png)
+
 ## 模板类（泛型）
 
 虚线框中的参数用来表示泛型参数或者模板参数
@@ -130,10 +145,19 @@ class Set<T>{
 
 ## 枚举
 
+```
+public enum 四季{
+春，
+夏，
+秋，
+冬;
+}
+```
+
 用来表示固定的一组值，这些值除符号值外，则无任何特性
 
 ![image-20220726214649373](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220726214649373.png)
-
+ 
 ## 关系
 
 ### 泛化（Generalization）
