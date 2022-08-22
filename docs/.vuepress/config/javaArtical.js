@@ -77,6 +77,10 @@ module.exports = {
                 {
                     text: 'Java特殊字符转义',
                     link: '/java/specialchar'
+                },
+                {
+                    text: '常用的分页方法',
+                    link: '/java/page'
                 }
 
             ]
