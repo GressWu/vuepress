@@ -127,6 +127,10 @@ module.exports = {
                 {
                     text: '计算机进制计算',
                     link: '/computerbasic/compute/'
+                },
+                {
+                    text: '字符集与字符编码',
+                    link: '/computerbasic/charcode/'
                 }
             ]
         },
