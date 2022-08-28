@@ -81,7 +81,12 @@ module.exports = {
                 {
                     text: '常用的分页方法',
                     link: '/java/page'
+                },
+                {
+                    text: '多线程简介与CompletableFuture初体验',
+                    link: '/java/completablefuture1'
                 }
+
 
             ]
         }
