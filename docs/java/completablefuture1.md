@@ -207,7 +207,7 @@ public class SmallTool {
 
 **输出结果**：时间戳 线程Id 线程名称 消息
 
-### supplyAsync的应用
+### supplyAsync的应用（开启）
 
 小白来饭店点菜，点了番茄炒蛋加米饭。厨师开始炒菜，打饭。小白打王者荣耀等待。饭做好了，小白吃饭。
 
@@ -251,7 +251,7 @@ public class _01_supplyAsync {
 
 ![image-20220828153150445](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220828153150445.png)
 
-### thenCompose的应用
+### thenCompose的应用（连接）
 
 需求升级，增加一个服务员专门打饭，厨师只需要做饭即可。
 
@@ -337,7 +337,7 @@ public class _01_supplyAsync {
 
 ![image-20220828153215111](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220828153215111.png)
 
-### thenCombine()的应用
+### thenCombine()的应用（结合）
 
 现在假设小白进餐厅的时候，饭还没有蒸好，蒸饭和炒菜同时进行。
 

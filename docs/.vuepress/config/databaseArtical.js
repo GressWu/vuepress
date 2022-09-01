@@ -12,6 +12,10 @@ module.exports = {
                 {
                     text: 'SQL每日一题(6-10)',
                     link: '/database/daily6_10'
+                },
+                {
+                    text: 'EXISTS和IN',
+                    link: '/database/existsandin'
                 }
             ]
         }
