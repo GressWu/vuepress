@@ -3,7 +3,7 @@ title: Mybatis-Plus用法总结
 date: 2021-02-03
 categories:
  - backEnd
- - DataBase
+ - database
 tags:
  - Java
  - Mybatis-Plus
