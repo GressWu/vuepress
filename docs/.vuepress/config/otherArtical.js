@@ -17,6 +17,10 @@ module.exports = {
         {
           text: '《生死停留》-选题新颖的悬疑片',
           link: '/video/stay'
+        },
+        {
+          text: '《再见列宁》-一个时代的逝去',
+          link: '/video/byeliening'
         }
       ]
     },
