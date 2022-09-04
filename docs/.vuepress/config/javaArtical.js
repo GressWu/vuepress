@@ -85,8 +85,11 @@ module.exports = {
                 {
                     text: '多线程简介与CompletableFuture初体验',
                     link: '/java/completablefuture1'
-                }
-
+                },
+                {
+                    text: '任务耗时检测',
+                    link: '/java/taskusetime'
+                },
 
             ]
         }
