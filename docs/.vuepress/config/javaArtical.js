@@ -89,6 +89,9 @@ module.exports = {
                 {
                     text: '任务耗时检测',
                     link: '/java/taskusetime'
+                },{
+                    text: '任务耗时检测',
+                    link: '/java/completablefutureotherapi'
                 },
 
             ]
