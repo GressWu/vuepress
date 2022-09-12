@@ -90,8 +90,12 @@ module.exports = {
                     text: '任务耗时检测',
                     link: '/java/taskusetime'
                 },{
-                    text: '任务耗时检测',
+                    text: 'CompletableFuture其他API',
                     link: '/java/completablefutureotherapi'
+                },
+                {
+                    text: 'CompletableFuture扩展',
+                    link: '/java/completablefutureextend'
                 },
 
             ]
