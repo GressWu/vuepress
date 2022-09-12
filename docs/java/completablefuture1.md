@@ -2,7 +2,7 @@
 title: 多线程简介与CompletableFuture初体验
 date: 2022-08-28
 categories:
-- backEnd
+- BackEnd
 tags:
 - Java
 ---

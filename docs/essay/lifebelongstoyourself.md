@@ -2,7 +2,7 @@
 title: 别让任何人打乱你的人生节奏
 date: 2022-03-03
 categories:
- - essay
+ - Essay
 tags:
  - essay
 sticky: 1

@@ -2,7 +2,7 @@
 title: 注解@Component与@Bean的区别
 date: 2022-02-20
 categories:
- - backEnd
+ - BackEnd
 tags:
  - Java
  - spring

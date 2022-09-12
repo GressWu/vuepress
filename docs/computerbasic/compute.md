@@ -2,9 +2,9 @@
 title: 计算机进制计算
 date: 2022-08-10
 categories:
-- computerBasic
+- ComputerBasic
 tags:
-- computerBasic
+- ComputerBasic
 ---
 
 ## 计算机单位

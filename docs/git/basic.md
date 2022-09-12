@@ -2,7 +2,7 @@
 title: git基本操作
 date: 2021-07-20
 categories:
- - version control
+ - Version Control
 tags:
  - Git
 ---

@@ -2,7 +2,7 @@
 title: SpringBoot读取配置文件的五种方式
 date: 2022-03-27
 categories:
- - backEnd
+ - BackEnd
 tags:
  - springBoot
 ---

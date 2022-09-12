@@ -2,7 +2,7 @@
 title: SpringBoot解决跨域问题
 date: 2022-03-20
 categories:
- - backEnd
+ - BackEnd
 tags:
  - springBoot
  - internet

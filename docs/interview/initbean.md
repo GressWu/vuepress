@@ -2,7 +2,7 @@
 title: Spring中注册Bean的方式
 date: 2022-03-04
 categories:
- - backEnd
+ - BackEnd
 tags:
  - Java
  - spring

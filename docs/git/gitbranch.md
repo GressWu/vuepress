@@ -2,7 +2,7 @@
 title: git分支与工作流
 date: 2021-07-21
 categories:
- - version control
+ - Version Control
 tags:
  - Git
 ---

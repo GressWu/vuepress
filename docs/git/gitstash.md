@@ -2,7 +2,7 @@
 title: git stash与git cherry-pick
 date: 2022-03-26
 categories:
- - version control
+ - Version Control
 tags:
  - Git
 ---

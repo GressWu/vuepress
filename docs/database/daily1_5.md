@@ -2,7 +2,7 @@
 title: SQL每日一题(1-5)
 date: 2022-08-03
 categories:
-- database
+- DataBase
 tags:
 - MySql
 ---

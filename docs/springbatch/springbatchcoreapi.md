@@ -2,7 +2,7 @@
 title: SpringBatch核心API
 date: 2022-06-23
 categories:
- - backEnd
+ - BackEnd
 tags:
  - springBatch
 ---

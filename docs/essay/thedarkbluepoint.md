@@ -2,7 +2,7 @@
 title: 《暗淡蓝点》
 date: 2022-02-23
 categories:
- - essay
+ - Essay
 tags:
  - essay
 ---

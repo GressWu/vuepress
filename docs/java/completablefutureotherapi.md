@@ -2,7 +2,7 @@
 title: CompletableFuture其他常用API
 date: 2022-09-10
 categories:
-- backEnd
+- BackEnd
 tags:
 - Java
 ---

@@ -134,6 +134,15 @@ module.exports = {
                 }
             ]
         },
+        {
+            text: 'Linux',
+            items: [
+                {
+                    text: '常用命令行',
+                    link: '/computerbasic/commoncommand/'
+                }
+            ]
+        },
     ]
 }
 

@@ -2,7 +2,7 @@
 title: VuePress创建自定义页面
 date: 2022-02-17
 categories:
- - frontEnd
+ - FrontEnd
 tags:
  - VuePress
 ---
@@ -69,7 +69,7 @@ VuePress与正常的Vue项目存在一些差异。普通Vue项目路由一般通
 date: 2022-02-17
 author: gress
 categories:
- - backEnd
+ - BackEnd
 tags:
  - Java
 ---

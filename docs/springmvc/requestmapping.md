@@ -2,7 +2,7 @@
 title: SpringMVC @RequestMapping注解
 date: 2022-03-27
 categories:
- - backEnd
+ - BackEnd
 tags:
  - SpringMVC
 ---

@@ -2,7 +2,7 @@
 title: 《再见列宁》-一个时代的逝去
 date: 2022-09-04
 categories:
-- video
+- Video
 tags:
 - movie
 - essay

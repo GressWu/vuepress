@@ -2,7 +2,7 @@
 title: git回退版本
 date: 2022-03-06
 categories:
- - version control
+ - Version Control
 tags:
  - Git
 ---

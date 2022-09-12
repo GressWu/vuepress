@@ -2,7 +2,7 @@
 title: 计算机英语
 date: 2022-02-13
 categories:
- - language
+ - Language
 tags:
  - English
 sticky: 3

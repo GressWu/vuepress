@@ -2,7 +2,7 @@
 title: 常用的分页方法
 date: 2022-08-22
 categories:
-- backEnd
+- BackEnd
 tags:
 - Java
 - MySql

@@ -2,7 +2,7 @@
 title: CompletableFuture扩展
 date: 2022-09-12
 categories:
-- backEnd
+- BackEnd
 tags:
 - Java
 ---

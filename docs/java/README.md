@@ -2,7 +2,7 @@
 title: 泛型
 date: 2022-01-13
 categories:
- - backEnd
+ - BackEnd
 tags:
  - Java
 ---

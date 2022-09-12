@@ -2,9 +2,9 @@
 title: 字符集与字符编码
 date: 2022-08-23
 categories:
-- computerBasic
+- ComputerBasic
 tags:
-- computerBasic
+- ComputerBasic
 ---
 
 ## 为什么要产生字符集
