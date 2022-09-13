@@ -16,6 +16,10 @@ module.exports = {
                 {
                     text: 'EXISTS和IN',
                     link: '/database/existsandin'
+                },
+                {
+                    text: 'SQL优化',
+                    link: '/database/optimize'
                 }
             ]
         }
