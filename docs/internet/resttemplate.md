@@ -3,6 +3,7 @@ title: RestTemplate
 date: 2022-02-12
 categories:
  - BackEnd
+ - Internet
 tags:
  - Java
  - internet

@@ -75,6 +75,10 @@ module.exports = {
                 {
                     text: 'Jwt的简单使用',
                     link: '/internet/jwt/'                    
+                },
+                {
+                    text: 'IP、子网掩码、网段、端口',
+                    link: '/internet/ipandother/'
                 }
             ]
         },
