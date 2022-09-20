@@ -7,6 +7,8 @@ tags:
 - MySql
 ---
 
+# SQL优化
+
 ## MySQL分层
 
 ![image-20220912170922211](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220912170922211.png)
@@ -128,7 +130,7 @@ show index from STUDENT ;
 
 ## SQL性能问题
 
-1. 分析SQL执行计划
+分析SQL执行计划
 
 ```sql
 explain SQL语句
@@ -181,4 +183,125 @@ INSERT into teacherCard values(3,'tldesc');
 
 ​
 
-2. MySQL优化器的干扰
+## explain的用法
+
+### 数据准备
+
+```sql
+create table course(
+cid int(3),
+cname varchar(20),
+tid int(3)
+);
+
+create table teacher(
+tid int(3),
+tname varchar(20),
+tcid int(3)
+);
+
+create table teacherCard(
+tcid int(3),
+tcdesc varchar(200)
+);
+
+INSERT into course values(1,'java',1);
+INSERT into course values(2,'html',1);
+INSERT into course values(3,'sql',2);
+INSERT into course values(4,'web',3);
+
+
+INSERT into teacher values(1,'tz',1);
+INSERT into teacher values(2,'tw',2);
+INSERT into teacher values(3,'tl',3);
+
+INSERT into teacherCard values(1,'tzdesc');
+INSERT into teacherCard values(2,'twdesc');
+INSERT into teacherCard values(3,'tldesc');
+```
+
+### 联表查询
+
+查询cid为2，或者tcid为3的教师证信息。
+
+```sql
+SELECT tc1.* from course cs,teacher tc,teacherCard tc1 where cs.tid = tc.tid and tc1.tcid = tc.tcid  and (cs.cid = '2' or tc.tcid  = '3');
+```
+
+![image-20220915220845145](C:\Users\11629\AppData\Roaming\Typora\typora-user-images\image-20220915220845145.png)
+
+id值相同，从上到下，顺序执行
+
+### 子查询
+
+id值不同，由大到小，顺序执行 cs->teacher->tc1 ，从最内层顺序查询
+
+```sql
+SELECT * from teacherCard tc1 where tc1.tcid = (SELECT tcid from teacher where tid = (SELECT tid from course cs where cs.cid = '2'));
+
+```
+
+![image-20220920203916875](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220920203916875.png)
+
+### 子查询加联表
+
+id值越大越执行，然后在按照从上往下执行
+
+```sql
+SELECT * from teacherCard tc1 where tc1.tcid = (SELECT  t.tcid from teacher t ,course c where t.tid  = c.tid AND  c.cid = '2');
+```
+
+![image-20220920204654753](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220920204654753.png)
+
+## SelectType查询类型
+
+Primary：包含子查询SQL的主查询（最外层）
+
+SubQuery:包含子查询SQL中的子查询（非最外层）
+
+Simple：简单查询 （不包含子查询和union查询）
+
+derived：衍生查询 （union查询）
+
+![image-20220920205930078](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220920205930078.png)
+
+## Type索引类型
+
+type优化前提是有索引
+
+效率从高到低 system>const>eq_ref>>ref>range>index>all
+
+其中：system,const只是理想状态  实际上ref>range>
+
+### 了解
+
+system：
+
+* 只有一条数据的表
+* 衍生表只有一条数据
+
+const：
+
+* 仅仅能查到一条数据的sql
+* 必须使用主键索引或唯一索引
+
+eq_ref：
+
+* 索引所在列每一条数据都是唯一的数据，不可重复。比如name，只有一个人叫张三。
+* 常见于唯一索引与主键索引
+
+### 掌握
+
+ref：
+
+* 非唯一性索引
+* 返回0或多条数据
+
+```sql
+INSERT into teacher values(4,'tz',4);
+create index tname_index on teacher(tname);
+SELECT * from teacher where tname  = 'tz';
+explain SELECT * from teacher where tname  = 'tz';
+```
+
+![image-20220920212613013](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220920212613013.png)
