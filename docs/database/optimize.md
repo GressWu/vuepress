@@ -7,8 +7,6 @@ tags:
 - MySql
 ---
 
-# SQL优化
-
 ## MySQL分层
 
 ![image-20220912170922211](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220912170922211.png)
@@ -305,3 +303,127 @@ explain SELECT * from teacher where tname  = 'tz';
 ```
 
 ![image-20220920212613013](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220920212613013.png)
+
+range:
+
+检索索引范围的行 > , < ,>=,<=,between,in（有时会失效，转为无索引all）
+
+```sql
+create index tid_index on teacher(tid);
+explain SELECT * from teacher t where tid > 1;
+explain select * from teacher t where tid BETWEEN 1 and 4;
+explain SELECT * from teacher t where tid >= 2;
+explain SELECT * from teacher t where tid < 2;
+explain SELECT * from teacher t where tid <= 2;
+explain select * from teacher t where tid in (1,3);
+```
+
+![image-20220921213306878](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220921213306878.png)
+
+index：
+
+检索所有索引的数据，只需查询索引表数据
+
+```sql
+explain SELECT tid from teacher;
+```
+
+![image-20220921213630609](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220921213630609.png)
+
+all:
+
+检索数据表所有的数据，会查询数据表所有数据
+
+比如，我们teacher表中的tcid未加索引，实际上查询tcid时会全表数据扫描，tid和tname也会被扫描
+
+```sql
+explain SELECT tcid from teacher t ;
+```
+
+![image-20220921214427754](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220921214427754.png)
+
+## possible_keys 和 key
+
+可能执行的索引与实际执行的索引
+
+## Key_len
+
+索引的长度
+
+作用：用于判断复合索引是否被完全使用
+
+utf-8  一个字符三个字节
+
+gbk 一个字符两个字节
+
+latin 一个字符一个字节
+
+## ref
+
+与type的ref 不是一个概念
+
+作用：知名当前表所参照的字段
+
+## rows
+
+实际通过索引查到的数据个数
+
+## Extra
+
+### using filesort
+
+代表性能消耗大 需要额外的一次**排序**，一般出现在order by
+
+排序： 需要先进行查询，在进行排序
+
+* 单索引
+
+例如： `select * from User where userid = 'lucy' order by name`
+
+假设userid是单索引，这个extra就是fileSort ，因为按照name进行排序，又要先进行一次查询再排序。
+
+注：如果排序和查询的是同一个字段就不会出现该种情况。
+
+* 复合索引
+
+例如：`select * from User where userid = 'lucy' order by name;`
+
+假设复合索引 `ina_index(userid,name,age)`
+
+如果是这样就不会出现using filesort，但如果 order by age就会。
+
+注：不能跨列，且必须从最左边的索引开始
+
+### using tempory
+
+代表性能消耗大 需要额外的创建一次**临时表**，一般出现在group by
+
+例如： `explain SELECT tid from teacher where tid in('2') group by tcid  ;`
+
+where查询了tid列，但是根据tcid排序，又会多一次查询操作
+
+### using index
+
+性能提升；索引覆盖。
+
+* 单索引
+
+假设`age`是索引列
+
+`select age from teacher where age = '';`
+
+* 复合索引
+
+假设`age、name`是复合索引
+
+`select age,name from teacher where age = ' ' or name = '';`
+
+不读原文件，只从索引文件进行检索，不需要回表查询，所用的列也全部在索引中。
+
+### using where
+
+* 单索引
+
+假设`age` 是索引列，要查询Name必须回原表查Name
+
+`select age,name from teacher where age = ''`20220920212613013](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220920212613013.png)
