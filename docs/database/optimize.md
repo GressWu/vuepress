@@ -1,5 +1,5 @@
 ---
-title: SQL优化
+title: SQL优化基础知识
 date: 2022-09-13
 categories:
 - DataBase
@@ -148,20 +148,20 @@ explain SELECT * from STUDENT where Id = '1' ;
 
 ```sql
 create table course(
-cid int(3),
-cname varchar(20),
-tid int(3)
+                       cid int(3),
+                       cname varchar(20),
+                       tid int(3)
 );
 
 create table teacher(
-tid int(3),
-tname varchar(20),
-tcid int(3)
+                        tid int(3),
+                        tname varchar(20),
+                        tcid int(3)
 );
 
 create table teacherCard(
-tcid int(3),
-tcdesc varchar(200)
+                            tcid int(3),
+                            tcdesc varchar(200)
 );
 
 INSERT into course values(1,'java',1);
@@ -426,4 +426,66 @@ where查询了tid列，但是根据tcid排序，又会多一次查询操作
 
 假设`age` 是索引列，要查询Name必须回原表查Name
 
-`select age,name from teacher where age = ''`20220920212613013](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220920212613013.png)
+`select age,name from teacher where age = ''`
+
+* 复合索引
+
+## Extra其他举例
+
+```sql
+create table test03
+(
+	a1 int(4) not null,
+	a2 int(4) not null,
+	a3 int(4) not null,
+	a4 int(4) not null
+)
+alter table test03 add index idx_a1_a2_a3_a4(a1,a2,a3,a4);
+```
+
+1、 最佳SQL：查询where条件按照索引顺序来
+
+```sql
+select a1,a2,a3,a4 from test03 where a1=1 and a2=2 and a3=3 and a4=4;
+```
+
+![image-20220925204318156](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220925204318156.png)
+
+2、
+
+```sql
+select a1,a2,a3,a4 from test03 where a1=1 and a2=2 and a4=3 order by a3;
+```
+
+![image-20220925204421358](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220925204421358.png)
+
+该SQL `Extra`字段包含`Using where; Using index`
+
+说明该SQL部分回表
+
+分析：a1,a2两个总段不需要回表查询，而a4跨列需要回表查询
+
+3、
+
+```
+select a1,a2,a3,a4 from test03 where a1=1 and a4=2  order by a3;
+```
+
+![image-20220925204908956](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20220925204908956.png)
+
+多了using fileSort说明多排序了一次
+
+where 和 order by 拼起来不要跨列
+
+### 为什么会出现有的失效
+
+2号SQLwhere条件 a1,a2 a4索引失效，因此order by a3刚好赶上a1,a2,a3的索引，因此不会失效
+
+3号1,3跨列
+
+### 总结
+
+* 如果(a,b,c,d)复合索引 和使用的顺序全部一致，则复合索引全部使用。如果部分一致，则使用部分索引
+* where和order by 拼起来需要保持顺序
+
+最左原则，不跨列使用

@@ -18,9 +18,13 @@ module.exports = {
                     link: '/database/existsandin'
                 },
                 {
-                    text: 'SQL优化',
+                    text: 'SQL优化基础知识',
                     link: '/database/optimize'
-                }
+                },
+                {
+                    text: 'SQL单表优化',
+                    link: '/database/singletableoptimize'
+                },
             ]
         }
 
