@@ -97,6 +97,10 @@ module.exports = {
                     text: 'CompletableFuture扩展',
                     link: '/java/completablefutureextend'
                 },
+                {
+                    text: '函数式编程思想与应用',
+                    link: '/java/functioncode'
+                },
 
             ]
         }
