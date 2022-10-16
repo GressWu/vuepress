@@ -101,6 +101,10 @@ module.exports = {
                     text: '函数式编程思想与应用',
                     link: '/java/functioncode'
                 },
+                {
+                    text: '常用函数式接口',
+                    link: '/java/functioninterface'
+                },
 
             ]
         }

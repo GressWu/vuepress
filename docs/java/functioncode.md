@@ -446,5 +446,152 @@ Book(id=5, name=三体, category=科幻, score=97, intro=三体讲述了)
 
 ```
 
+### 终结操作
 
+#### forEach
 
+对流中的元素进行遍历操作，我们通过传入的参数去指定遍历的元素进行具体什么操作
+
+```java
+//打印出所有的作者信息
+List<Author> authors = getAuthors();
+        authors.stream()
+                .forEach(author -> System.out.println(author));
+
+```
+
+#### count
+
+用来获取当前流中元素的个数
+
+```java
+//打印输出所有书籍类型的个数
+long count = authors.stream()
+                .flatMap(author -> author.getBooks().stream())
+                .flatMap(book -> Stream.of(book.getCategory().split(",")))
+                .distinct()
+                .count();
+        System.out.println(count);
+```
+
+#### max&min
+
+用来取流中的最值
+
+```java
+//输出得分最高和最低书籍的信息
+ List<Author> authors = getAuthors();
+        Optional<Book> max = authors.stream()
+                .flatMap(author -> author.getBooks().stream())
+                .max((a, b) -> a.getScore() - b.getScore());
+        System.out.println(max.get());
+
+        Optional<Book> min = authors.stream()
+                .flatMap(author -> author.getBooks().stream())
+                .min((a, b) -> a.getScore() - b.getScore());
+        System.out.println(min.get());
+```
+
+#### collect
+
+把当前流转换成一个集合
+
+```java
+        List<Author> authors = getAuthors();
+        //获取作者名字的List集合
+        List<String> collect = authors.stream()
+                .map(author -> author.getName())
+                .collect(Collectors.toList());
+        //获取作者名字的Set集合
+        Set<String> collect1 = authors.stream()
+                .map(author -> author.getName())
+                .collect(Collectors.toSet());
+        //获取<作者名字,List<Book>>的map
+        Map<String, List<Book>> collect2 = authors.stream()
+                .collect(Collectors.toMap(author -> author.getName(), author -> author.getBooks()));
+        //根据作家类型分类
+        Map<String, List<Author>> collect3 = authors.stream()
+                .collect(Collectors.groupingBy(author -> author.getIntro()));
+```
+
+#### anyMatch
+
+可以用来判断是否有**任意**符合匹配条件的元素，结果为**Boolean**类型
+
+```java
+  //判断是否有年龄小于等于三十的作家
+        boolean b = authors.stream()
+                .anyMatch(author -> author.getAge() <= 30);
+        System.out.println(b);
+```
+
+#### allMatch
+
+可以用来判断是否**都符合匹配条件**，结果为**boolean**类型。如果都符合结果为true，否则为false。
+
+```java
+  //判断是不是所有作家都是成年人
+ boolean b = authors.stream()
+                .allMatch(author -> author.getAge()>18);
+```
+
+#### noneMatch
+
+可以用来判断是否**都不符合条件**，结果为boolean类型。如果都不符合结果为true，否则为false。
+
+```java
+ //判断是不是所有作家都不是成年人
+        boolean b = authors.stream()
+                .noneMatch(author -> author.getAge()>18);
+```
+
+#### findAny
+
+获取流中的任意一个元素。该方法没有办法保证获取的一定是流中的第一个元素。
+
+```java
+//输出任意一个作家的姓名
+authors.stream()
+        .findAny()
+        .ifPresent(author1 -> System.out.println(author1.getName()));
+```
+
+#### findFirst
+
+获取流中的第一个元素。
+
+```java
+//输出年龄最小的作家名字
+        authors.stream()
+                .sorted((a,b)-> a.getAge()-b.getAge())
+                .findFirst()
+                .ifPresent(person -> System.out.println(person.getName()));
+```
+
+#### reduce
+
+**对流中的数据按照你制定的计算方式计算出一个结果**。
+
+reduce的作用是把Stream中的元素给组合起来，我们可以传入一个初始值，它会按照我们的计算方式依次拿流中的元素和在初始值的基础上进行计算，计算结果再和后面的元素计算。
+
+```java
+T result = identity;
+for(T element : this.stream)
+	result = accumulator.apply(result,element)
+return result;
+```
+
+其中identity就是我们可以通过方法参数传入的初始值，accumulator的apply具体进行什么计算实际上也是由我们自己决定。
+
+```java
+//输出所有作家年龄之和 + 2
+        Integer reduce = authors.stream()
+                .map(author -> author.getAge())
+                .reduce(2, (a,b)-> a+b);
+        System.out.println(reduce);
+```
+
+### 总结
+
+* 流是一次性的（一旦一个流对象进行终结操作，这个流就不能再被使用）
+* 不会影响原数据
