@@ -25,6 +25,14 @@ module.exports = {
                     text: 'SQL单表优化',
                     link: '/database/singletableoptimize'
                 },
+                {
+                    text: 'SQL多表优化',
+                    link: '/database/multableoptimize'
+                },
+                {
+                    text: '避免索引失效与常见优化方法',
+                    link: '/database/normaloptimize'
+                },
             ]
         }
 
