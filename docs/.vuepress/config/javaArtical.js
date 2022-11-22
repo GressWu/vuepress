@@ -105,6 +105,11 @@ module.exports = {
                     text: '常用函数式接口',
                     link: '/java/functioninterface'
                 },
+                {
+                    text: '策略模式的使用',
+                    link: '/java/strategypatternuse'
+                },
+
 
             ]
         }
