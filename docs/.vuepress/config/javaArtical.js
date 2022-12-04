@@ -109,6 +109,10 @@ module.exports = {
                     text: '策略模式的使用',
                     link: '/java/strategypatternuse'
                 },
+                {
+                    text: 'Object超级父类',
+                    link: '/java/objectclass'
+                },
 
 
             ]
