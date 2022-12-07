@@ -81,3 +81,19 @@ int r = 0/10;.try
 
 ## 清除多余jar包
 `ctrl + alt + o`
+
+## 查找方法的调用位置
+`alt + f7`
+
+## uml视图相关
+### 查看uml视图
+`ctrl + shift + alt + o`
+
+### 查看所选元素uml的父类
+`ctrl + shift + alt + p`
+
+### 查看所选元素uml的父类
+`ctrl + shift + alt + p`
+
+### 查看所选元素uml的子类
+`ctrl + shift + alt + b`
