@@ -95,7 +95,11 @@ module.exports = {
                 {
                     text: 'SpringAop',
                     link: '/spring/springaop/'
-                }
+                },
+                {
+                    text: '从idea提示再看DI的三种注入方式',
+                    link: '/spring/ideaanddi/'
+                },
             ]
         },
     ]
