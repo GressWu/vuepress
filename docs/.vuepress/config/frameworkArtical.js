@@ -62,6 +62,10 @@ module.exports = {
                     text: 'SpringBoot h2数据库的使用',
                     link: '/springboot/h2database'
                 },
+                {
+                    text: 'SpringBoot中LogBack的使用',
+                    link: '/springboot/logback'
+                }
             ]
         },
         {
