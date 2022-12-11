@@ -111,7 +111,7 @@ public class TeUser {
 }
 ```
 
-### 推荐写法
+## 推荐写法
 
 ```java
 package com.example.springbootact.Controller;
@@ -170,4 +170,10 @@ public class GetTheAnimalController {
 }
 
 ```
+## 三种注入方式的使用场景
+构造器注入：强依赖性（即必须使用此依赖），不变性（各依赖不会经常变动）
+
+Setter注入：可选（没有此依赖也可以工作），可变（依赖会经常变动）
+
+Field注入：大多数情况下尽量少使用字段注入，一定要使用的话， @Resource相对@Autowired对IoC容器的耦合更低
 
