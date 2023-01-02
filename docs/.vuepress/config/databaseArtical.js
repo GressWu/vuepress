@@ -33,6 +33,10 @@ module.exports = {
                     text: '避免索引失效与常见优化方法',
                     link: '/database/normaloptimize'
                 },
+                {
+                    text: 'MySQL事务',
+                    link: '/database/mysqlfourlevel'
+                }
             ]
         }
 
