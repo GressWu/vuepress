@@ -7,8 +7,6 @@ tags:
 - MySql
 ---
 
-# MySQL事务
-
 ## 四种事务隔离机制
 
 1. Serializable 序列化，**同一时间只能有一个事务在执行**。

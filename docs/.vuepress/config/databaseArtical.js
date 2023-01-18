@@ -36,6 +36,10 @@ module.exports = {
                 {
                     text: 'MySQL事务',
                     link: '/database/mysqlfourlevel'
+                },
+                {
+                    text: 'MySQL、Oracle、DB2导入导出常用命令',
+                    link: '/database/impexpcod'
                 }
             ]
         }
