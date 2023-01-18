@@ -79,6 +79,10 @@ module.exports = {
                 {
                     text: 'IP、子网掩码、网段、端口',
                     link: '/internet/ipandother/'
+                },
+                {
+                    text: 'Cookie',
+                    link: '/internet/cookie/'
                 }
             ]
         },
