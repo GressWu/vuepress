@@ -121,11 +121,17 @@ module.exports = {
                     text: 'Servlet容器与Servlet组件',
                     link: '/java/servletconandcom'
                 },
-
-
-
             ]
-        }
+        },
+        {
+            text: 'Effective Java',
+            items: [
+                {
+                    text: '静态工厂方法代替构造器',
+                    link: '/effectivejava/staticfactorymethod/'
+                }
+            ]
+        },
     ]
 
 

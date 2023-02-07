@@ -86,6 +86,15 @@ module.exports = {
             ]
         },
         {
+            text: 'SpringCloud',
+            items: [
+                {
+                    text: 'SpringCloud GateWay',
+                    link: '/springcloud/gateway/'
+                }
+            ]
+        },
+        {
             text: 'Spring',
             items: [
                 {
