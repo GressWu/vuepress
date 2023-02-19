@@ -17,6 +17,16 @@ select * from (select rownumber() over(order by id asc ) as rowid from table whe
 where a1.rowid > startIndex
 ```
 
+```sql
+select * from
+    (
+        select rownum as rn,t.* from testData t
+        where rownum<=20
+    ) t
+where t.rn>=11
+```
+rn列是虚拟出来的，必须从1开始往上挨着查询。例如想查第三条，就必须是rn>2,rn<4。不可以是rn=3。
+
 ### DB2、MYSQL
 
 ```sql

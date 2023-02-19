@@ -30,6 +30,10 @@ module.exports = {
         {
           text: '2021读书分享',
           link: '/read/2021report'
+        },
+        {
+          text: '2022读书分享',
+          link: '/read/2022report'
         }
       ]
     },

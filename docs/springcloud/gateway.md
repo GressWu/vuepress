@@ -297,3 +297,171 @@ spring:
 ```
 
 发送十次请求，8次访问`http://localhost:9201/`，2次访问`http://localhost:9208/`
+
+## 路由配置
+
+在`spring cloud gateway`中配置`uri`有三种方式，包括
+
+- websocket配置方式
+
+```yml
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: ruoyi-api
+          uri: ws://localhost:9090/
+          predicates:
+            - Path=/api/**
+```
+
+- http地址配置方式
+
+```yml
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: ruoyi-api
+          uri: http://localhost:9090/
+          predicates:
+            - Path=/api/**
+```
+
+- 注册中心配置方式
+
+```yml
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: ruoyi-api
+          uri: lb://ruoyi-system
+          predicates:
+            - Path=/api/**
+```
+
+我们一般选择第三种配置，通过application name在配置中心找ruoyi-system的服务
+
+![image-20230208202426510](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20230208202426510.png)
+
+注意：如果通过网关访问出现503的情况，可以尝试引入下面的依赖
+
+```xml
+ <!--客户端负载均衡loadbalancer-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+```
+
+## 限流
+
+顾名思义，限流就是限制流量
+
+1、添加依赖
+
+```xml
+<!-- spring data redis reactive 依赖 -->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+</dependency>
+```
+
+2、限流规则，根据`URI`限流
+
+```yml
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    password: 
+  cloud:
+    gateway:
+      routes:
+        # 系统模块
+        - id: ruoyi-system
+          uri: lb://ruoyi-system
+          predicates:
+            - Path=/system/**
+          filters:
+            - StripPrefix=1
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1 # 令牌桶每秒填充速率
+                redis-rate-limiter.burstCapacity: 2 # 令牌桶总容量
+                key-resolver: "#{@pathKeyResolver}" # 使用 SpEL 表达式按名称引用 bean
+```
+
+pathKeyResolver为Bean的名称
+
+3、添加配置类
+
+```java
+package com.ruoyi.gateway.config;
+
+import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import reactor.core.publisher.Mono;
+
+/**
+ * 限流规则配置类
+ */
+@Configuration
+public class KeyResolverConfiguration
+{
+    @Bean
+    public KeyResolver pathKeyResolver()
+    {
+        return exchange -> Mono.just(exchange.getRequest().getURI().getPath());
+    }
+}
+```
+
+还可以通过IP和参数进行限流
+
+## 解决跨域
+
+```yml
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOriginPatterns: "*"
+            allowed-methods: "*"
+            allowed-headers: "*"
+            allow-credentials: true
+            exposedHeaders: "Content-Disposition,Content-Type,Cache-Control"
+```
+
+其他方法，还可以通过ngnix配置解决跨域问题。
+
+还有后端去解决跨域，[SpringBoot解决跨域问题 | 月牙弯弯](http://112.124.58.32/springboot/crossorgin.html)。
+
+## 黑名单配置
+
+就是不能访问的地址。实现自定义过滤器`BlackListUrlFilter`，需要配置黑名单地址列表`blacklistUrl`，当然有其他需求也可以实现自定义规则的过滤器。
+
+```yml
+spring:
+  cloud:
+    gateway:
+      routes:
+        # 系统模块
+        - id: ruoyi-system
+          uri: lb://ruoyi-system
+          predicates:
+            - Path=/system/**
+          filters:
+            - StripPrefix=1
+            - name: BlackListUrlFilter
+              args:
+                blacklistUrl:
+                - /user/list
+```
+
+和之前限流一样，也需要写name相对应的Spring Bean组件 `BlackListUrlFilter`组件
