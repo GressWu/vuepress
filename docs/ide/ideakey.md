@@ -85,6 +85,35 @@ int r = 0/10;.try
 ## 查找方法的调用位置
 `alt + f7`
 
+## 复制文件全路径名
+`ctrl + shift + c`
+
+## 从剪贴板选择值黏贴(paste from history)
+`ctrl + shift + v`
+
+## 复制到下一行
+`ctrl + d`
+
+## 删除当前行
+`ctrl + Y`
+
+## 逐级选中(extend selection)
+`ctrl + w`
+
+## 逐级缩小范围(shrink selection)
+`ctrl + shift + w`
+
+## 替换
+`ctrl + r`
+
+## 多行同单词编辑
+`alt + j` 多次点击可以选择同一单词的同一位置
+![image-20230220215432392](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20230220215432392.png)
+
+## 多行联排编辑
+按住鼠标中间滚轮
+![image-20230220215647207](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20230220215647207.png)
+
 ## uml视图相关
 ### 查看uml视图
 `ctrl + shift + alt + o`
