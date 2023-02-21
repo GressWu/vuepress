@@ -66,3 +66,7 @@ mute v. 静音、沉默
 
 resume v. 恢复
 
+redundant adj. 多余的
+
+scratch n. 草稿
+

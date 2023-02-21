@@ -79,6 +79,9 @@ int r = 0/10;.try
 ## 大小写转换
 `ctrl + shift + u`
 
+## 快速创建类
+`alt + insert`
+
 ## 清除多余jar包
 `ctrl + alt + o`
 
@@ -106,6 +109,15 @@ int r = 0/10;.try
 ## 替换
 `ctrl + r`
 
+## 格式化
+`ctrl + alt + l`
+
+## Search for everywhere 
+`double shift`
+
+## 打开最近使用过的文件列表
+`ctrl + e`
+
 ## 多行同单词编辑
 `alt + j` 多次点击可以选择同一单词的同一位置
 ![image-20230220215432392](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20230220215432392.png)
@@ -113,6 +125,15 @@ int r = 0/10;.try
 ## 多行联排编辑
 按住鼠标中间滚轮
 ![image-20230220215647207](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20230220215647207.png)
+
+## 行中央切换到下一行
+`ctrl + shift + enter`
+
+## 将整行代码向上或向下移动
+`ctrl/alt + shift + 上下箭头`
+
+## 定位上下一次操作
+`ctrl + alt + 左右箭头`
 
 ## uml视图相关
 ### 查看uml视图
