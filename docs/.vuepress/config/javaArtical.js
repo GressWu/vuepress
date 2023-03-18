@@ -121,6 +121,10 @@ module.exports = {
                     text: 'Servlet容器与Servlet组件',
                     link: '/java/servletconandcom'
                 },
+                {
+                    text: '缓存的使用',
+                    link: '/java/cacheuse'
+                },
             ]
         },
         {

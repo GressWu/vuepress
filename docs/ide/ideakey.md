@@ -97,6 +97,9 @@ int r = 0/10;.try
 ## 复制到下一行
 `ctrl + d`
 
+## 快速重写方法
+`ctrl + o`
+
 ## 删除当前行
 `ctrl + Y`
 
@@ -108,6 +111,12 @@ int r = 0/10;.try
 
 ## 替换
 `ctrl + r`
+
+## 抽取变量或方法
+`ctrl + shift + alt + t`
+
+## 抽取测试方法
+`ctrl + shift + t`
 
 ## 格式化
 `ctrl + alt + l`
