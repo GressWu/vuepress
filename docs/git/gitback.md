@@ -43,7 +43,7 @@ git reset --soft 8aa1f3955d8134938d948825a8b4fbae159ae8ac
 2. 第二步通过命令撤销commit和add
 
 ```shell
-git reset --soft 7aa1f3955d8653738d948825a8b4fbae159ae8ac
+git reset --mixed 7aa1f3955d8653738d948825a8b4fbae159ae8ac
 ```
 
 ## 回滚到上个(或某个)版本

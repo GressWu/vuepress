@@ -125,6 +125,10 @@ module.exports = {
                     text: '缓存的使用',
                     link: '/java/cacheuse'
                 },
+                {
+                    text: '线程池简介与基本使用',
+                    link: '/java/threadpool'
+                },
             ]
         },
         {
