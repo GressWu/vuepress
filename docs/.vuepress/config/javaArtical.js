@@ -129,6 +129,14 @@ module.exports = {
                     text: '线程池简介与基本使用',
                     link: '/java/threadpool'
                 },
+                {
+                    text: '&与&&的区别',
+                    link: '/java/anddiffrence'
+                },
+                {
+                    text: '模板模式的使用',
+                    link: '/java/templatepatreen'
+                },
             ]
         },
         {
