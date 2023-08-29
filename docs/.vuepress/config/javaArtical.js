@@ -137,6 +137,10 @@ module.exports = {
                     text: '模板模式的使用',
                     link: '/java/templatepatreen'
                 },
+                {
+                    text: 'NaN值出现的原因分析',
+                    link: '/java/nanreason'
+                },
             ]
         },
         {

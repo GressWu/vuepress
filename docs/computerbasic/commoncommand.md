@@ -20,6 +20,10 @@ sticky: 4
 
 查看指定ip的端口是否能够访问：`telnet ipaddress port`
 
+查看内存使用情况：`free -h`
+
+查看硬盘使用情况：`df -h`
+
 ## MySQL常用命令
 
 重启Mysql：`service mysql restart`
