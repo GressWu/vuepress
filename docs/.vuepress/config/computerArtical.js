@@ -148,6 +148,10 @@ module.exports = {
                 {
                     text: '常用命令行',
                     link: '/computerbasic/commoncommand/'
+                },
+                {
+                    text: 'Shell编程',
+                    link: '/computerbasic/shell/'
                 }
             ]
         },

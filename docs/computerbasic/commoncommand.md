@@ -24,6 +24,11 @@ sticky: 4
 
 查看硬盘使用情况：`df -h`
 
+查看当前文件夹的大小：`du -sh`
+
+查找文件位置：` find /home -name "myshell*"`
+find 文件位置 -name 要查找的文件名
+
 ## MySQL常用命令
 
 重启Mysql：`service mysql restart`
