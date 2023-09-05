@@ -144,6 +144,15 @@ int r = 0/10;.try
 ## 定位上下一次操作
 `ctrl + alt + 左右箭头`
 
+## 从历史选择粘贴
+`ctrl + shift + v`
+
+## 复制文件路径
+`ctrl + shift + c`
+
+## 切换本类的上下个方法
+`alt + 上下`
+
 ## uml视图相关
 ### 查看uml视图
 `ctrl + shift + alt + o`
