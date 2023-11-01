@@ -10,7 +10,7 @@ tags:
 # crontab语法规则
 
 ## 一、项目语法规则
-crontab表达式是基于cron表达式组成的cron表，主要用途为LInux系统下shell脚本实现定时任务。
+crontab表达式是基于cron表达式组成的cron表，主要用途为Linux系统下shell脚本实现定时任务。
 
 1. 位数（共有六位）
 
@@ -38,7 +38,13 @@ crontab表达式是基于cron表达式组成的cron表，主要用途为LInux系
 
 * 每隔10天6:30执行一次命令
   * 30 6 */10 * * command
- 
+
+## 三、使用
+查看有哪些在运行的crontab命令 `crontab -l`     
+编辑crontab任务 `crontab -e`    
+例如`55 23 * * * /home/yuwei/startBash.sh`  
+注意：要给被执行文件执行权限`chmod +x startBash.sh`  
+
 # Cron表达式
 与CronTab表达式不同，Cron表达式主要应用与SpringBoot定时任务的设置上，一共有七位。少了command位，增加了秒，年位，其余用法与Cron表达式一致。   
 **注意：** SpringBoot 只能解析六位Cron表达式，无法完成年的定时任务，因此解析cron表达式的时候可以先判断是否可以解析。
