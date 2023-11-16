@@ -141,6 +141,10 @@ module.exports = {
                     text: 'NaN值出现的原因分析',
                     link: '/java/nanreason'
                 },
+                {
+                     text: 'JDK17新特新',
+                     link: '/java/jdk17'
+                },
             ]
         },
         {
