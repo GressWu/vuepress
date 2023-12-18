@@ -142,8 +142,12 @@ module.exports = {
                     link: '/java/nanreason'
                 },
                 {
-                     text: 'JDK17新特新',
+                     text: 'JDK17新特性',
                      link: '/java/jdk17'
+                },
+                {
+                     text: 'ClassLoader应用',
+                     link: '/java/classLoader'
                 },
             ]
         },
