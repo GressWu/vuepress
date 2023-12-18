@@ -16,6 +16,7 @@ tags:
 其中**JDK自带的函数式接口**还加上了`@FunctionalInterface`注解进行标识。
 
 ## 常见的函数式接口
+![image-20231218142627583](https://md-img-market.oss-cn-beijing.aliyuncs.com/img/image-20231218142627583.png)
 
 ### Consumer 消费接口
 
@@ -209,4 +210,83 @@ authors.stream()
 3ForkJoinPool.commonPool-worker-25
 471
 ```
+
+## Lambda表达式懒加载
+
+lambda 表达式的重点是**延迟执行** (deferred execution)
+
+好处：
+
+* 在一个单独的线程中运行代码;
+
+* 多次运行代码;
+
+* 在算法的适当位置运行代码(例如，排序中的比较操作);
+
+* 发生某种情况时运行代码(如，点击了一个按钮，数据已经到达，等等);
+
+* 只在必要时才运行代码。
+
+```java
+package com.yuwei.reflect;
+
+
+import java.time.LocalDateTime;
+import java.util.function.Supplier;
+
+public class AATest {
+    public static void main(String[] args) {
+        System.out.println(LocalDateTime.now());
+        lambda1(true,testString());
+        System.out.println(LocalDateTime.now());
+        lambda1(false,testString());
+        System.out.println(LocalDateTime.now());
+        lambda2(true,()->testString());
+        System.out.println(LocalDateTime.now());
+        lambda2(false,()->testString());
+        System.out.println(LocalDateTime.now());
+    }
+
+    public static String testString(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("调用testString");
+        return "testString";
+    }
+
+    public static void lambda1(boolean flag,String msg){
+        if(flag){
+            System.out.println(msg);
+        }
+    }
+
+    public static void lambda2(boolean flag, Supplier<String> supplier){
+        if(flag){
+            supplier.get();
+        }
+    }
+}
+
+```
+
+如上面代码所示，
+
+调用`lambda1(false,testString());`不管第一个参数是不是true，都会调用testString()。当testString()用的时间过长的话，非常影响性能。用lambda表达式即可解决该问题。
+
+```
+2023-12-18T13:42:55.350
+调用testString
+testString
+2023-12-18T13:42:57.353
+调用testString
+2023-12-18T13:42:59.362
+调用testString
+2023-12-18T13:43:01.370
+2023-12-18T13:43:01.370
+```
+
+
 
