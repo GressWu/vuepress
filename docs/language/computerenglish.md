@@ -70,3 +70,10 @@ redundant adj. 多余的
 
 scratch n. 草稿
 
+descriptors n. 描述符
+
+facets n. 方面
+
+artifact n.  abort
+“Artifact” is a pretty broad term when it comes to software development. Most pieces of software have a lot of artifacts that are necessary for them to run. Some artifacts explain how a piece of software is supposed to work, while others actually allow that program to run.
+

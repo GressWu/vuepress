@@ -24,6 +24,10 @@ module.exports = {
                 {
                     text: 'git stash与git cherry-pick',
                     link: '/git/gitstash'
+                },
+                {
+                     text: 'git原理',
+                     link: '/git/gitprinciple'
                 }
             ]
         },
