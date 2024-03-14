@@ -149,6 +149,14 @@ module.exports = {
                      text: 'ClassLoader应用',
                      link: '/java/classLoader'
                 },
+                {
+                      text: '利用线程池实现定时任务',
+                      link: '/java/crontimer'
+                },
+                {
+                      text: '内部类与匿名内部类编译',
+                      link: '/java/parseinnerclass'
+                },
             ]
         },
         {
