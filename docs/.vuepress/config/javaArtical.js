@@ -157,6 +157,10 @@ module.exports = {
                       text: '内部类与匿名内部类编译',
                       link: '/java/parseinnerclass'
                 },
+                {
+                    text: 'maven profile完成不同环境的切换',
+                    link: '/java/mavenprofile'
+                },
             ]
         },
         {
