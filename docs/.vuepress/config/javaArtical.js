@@ -158,6 +158,10 @@ module.exports = {
                       link: '/java/parseinnerclass'
                 },
                 {
+                    text: 'HTTP请求导致Base64解析失败的问题',
+                    link: '/java/httpandbase64'
+                },
+                {
                     text: 'maven profile完成不同环境的切换',
                     link: '/java/mavenprofile'
                 },
@@ -172,6 +176,7 @@ module.exports = {
                 }
             ]
         },
+
     ]
 
 
