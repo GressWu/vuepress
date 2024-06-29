@@ -165,6 +165,10 @@ module.exports = {
                     text: 'maven profile完成不同环境的切换',
                     link: '/java/mavenprofile'
                 },
+                {
+                    text: '记一次生产OOM宕机的生产问题',
+                    link: '/java/unablecreatenewthread'
+                },
             ]
         },
         {
