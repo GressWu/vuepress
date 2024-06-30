@@ -94,3 +94,7 @@ import.util.concurrent.Executorspublic class MyThreadPool {
 7.阻塞，Blocked（重点关注）
 
 8.停止，Parked(此状态必须明确,与字面意思不同,主要是指线程空闲时候的状态.如在线程池中,当线程被调用使用后再次放入到池子中,则其状态变为了Parked)
+
+## 关于thread dump和heap dump的补充
+参考资料:
+https://cloud.tencent.com/developer/article/1900453

@@ -169,6 +169,10 @@ module.exports = {
                     text: '记一次生产OOM宕机的生产问题',
                     link: '/java/unablecreatenewthread'
                 },
+                {
+                    text: '分析OOM工具的使用',
+                    link: '/java/oomanalysis'
+                },
             ]
         },
         {
