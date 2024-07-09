@@ -173,6 +173,10 @@ module.exports = {
                     text: '分析OOM工具的使用',
                     link: '/java/oomanalysis'
                 },
+                {
+                    text: '线程的阻塞',
+                    link: '/java/threadjoin'
+                },
             ]
         },
         {
