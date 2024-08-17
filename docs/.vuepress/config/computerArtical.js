@@ -62,6 +62,10 @@ module.exports = {
                 {
                     text: '《大话设计模式》—— 简单工厂模式',
                     link: '/designpattern/factorypattern'
+                },
+                {
+                    text: '原型模式',
+                    link: '/designpattern/prototype'
                 }
             ]
         },

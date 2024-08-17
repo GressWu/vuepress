@@ -16,7 +16,7 @@ tags:
 ## 浅拷贝
 
 Java使用中最多的就是浅拷贝
-
+### 直接通过引用赋值
 ```java
 package com.yuwei;
 
@@ -53,42 +53,20 @@ true
 
 通过结果输出结果我们可以看出，`=`进行浅拷贝，zs和zsCopy对象同时指向同一个内存地址。因此无论是zs还是zsCopy改变了值，两个对象的值都会发生变化。
 
-## 深拷贝
+
 
 ### 实现Cloneable接口重写clone()方法
 
 ```java
-package com.yuwei;
+package com.yuwei.deepcopy;
 
 public class Person implements Cloneable{
 
-    private String name;
+    public String name;
 
-    private String id;
+    public String age;
 
-    public Person(String name, String id) {
-        this.name = name;
-        this.id = id;
-    }
-
-
-    public Person() {
-    }
-
-    //重写clone()方法
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", id='" + id + '\'' +
-                '}';
-    }
-
+    public RelativePerson relativePerson;
 
     public String getName() {
         return name;
@@ -98,15 +76,107 @@ public class Person implements Cloneable{
         this.name = name;
     }
 
-    public String getId() {
-        return id;
+    public String getAge() {
+        return age;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public RelativePerson getRelativePerson() {
+        return relativePerson;
+    }
+
+    public void setRelativePerson(RelativePerson relativePerson) {
+        this.relativePerson = relativePerson;
+    }
+
+    @Override
+    protected Person clone() throws CloneNotSupportedException {
+        return (Person)super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                ", relativePerson=" + relativePerson +
+                '}';
     }
 }
+
 ```
+
+```java
+package com.yuwei.deepcopy;
+
+public class RelativePerson {
+
+    String name;
+
+    String age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    @Override
+    public String toString() {
+        return "RelativePerson{" +
+                "name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                '}';
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+
+}
+```
+
+```java
+        package com.yuwei.deepcopy;
+
+public class DeepTest {
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Person person = new Person();
+        person.setAge("12");
+        person.setName("张三");
+        RelativePerson relativePerson = new RelativePerson();
+        relativePerson.setAge("23");
+        relativePerson.setName("审稿人");
+        person.setRelativePerson(relativePerson);
+
+        Person clone = person.clone();
+        clone.setName("李四");
+        clone.getRelativePerson().setName("闪光灯");
+        System.out.println(person);
+        System.out.println(clone);
+    }
+}
+
+```
+**输出结果**  
+```
+Person{name='张三', age='12', relativePerson=RelativePerson{name='闪光灯', age='23'}}
+Person{name='李四', age='12', relativePerson=RelativePerson{name='闪光灯', age='23'}}
+```
+通过对输出结果的分析我们可以看出，对于基础类型Cloneable接口确实能是心啊深拷贝，但是对于引用类型来说仍然是浅拷贝。
+
+
+## 深拷贝
 
 ### 重载构造方法实现深拷贝
 
@@ -159,7 +229,7 @@ public class Person{
 }
 ```
 
-### 测试类
+#### 测试类
 
 ```java
 package com.yuwei;
@@ -182,10 +252,13 @@ public class CopyTest {
 
 ```
 
-### 测试结果
+#### 测试结果
 
 ```java
 false
 false
 ```
+
+### 序列化完成深拷贝
+[Java序列化与反序列化 | 月牙弯弯](http://112.124.58.32/java/serializable.html)
 
