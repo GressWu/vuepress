@@ -66,6 +66,10 @@ module.exports = {
                 {
                     text: '原型模式',
                     link: '/designpattern/prototype'
+                },
+                {
+                    text: '建造者模式',
+                    link: '/designpattern/builder'
                 }
             ]
         },
