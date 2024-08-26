@@ -1,36 +1,164 @@
 ---
-title: 原型模式
-date: 2024-08-17
+title: 策略模式
+date: 2024-08-10
 categories:
 - DesignPattern
 tags:
 - Java
 ---
 
-原型模式是一种创建型设计模式，旨在通过复制现有对象来创建新对象，而无需直接依赖于构造函数。这种模式涉及创建原型对象，然后通过克隆这些原型对象来创建新的对象。
+## 策略模式的使用场景
 
-## 原型模式的主要参与者：
+策略模式是一种行为型设计模式，它用于在运行时根据不同的情况选择不同的算法或策略。该模式将算法封装成独立的策略类，使得它们可以互相替换，而不会影响到客户端的代码。
 
-原型接口（Prototype Interface）：定义了克隆自身的方法，通常是一个clone方法。
+策略模式适用于以下场景：
 
-具体原型（Concrete Prototype）：实现了原型接口，负责实现克隆方法以生成新对象的副本。
+1. 当一个系统中有**多个类似的算法**，但每个算法在实现上有所不同，并且需要在运行时动态选择其中一个算法时，可以使用策略模式。这样可以避免使用大量的条件语句来判断不同的情况。
+2. 当需要在**不同的时间或条件下使用不同的算法时**，可以使用策略模式来实现算法的灵活切换。例如，在一个电商网站中，根据不同的促销活动，可以选择不同的折扣策略来计算商品的价格。
+3. 当一个类中有**多个相关的行为**，但是不希望将这些行为都放在一个类中实现时，可以使用策略模式。通过将每个行为封装成一个独立的策略类，可以使代码更加清晰、可维护和可扩展。
 
-客户端（Client）：负责创建新对象的客户端代码，通过请求原型对象克隆自身来创建新对象。
+## 具体实现
 
-## 使用场景
+```java
+package com.yuwei.strategy;
 
-* **对象创建成本较高**：当对象的创建过程复杂或者创建对象需要消耗大量资源时，使用原型模式可以避免重复创建对象，提高性能。
+public interface Strategy {
 
-* **对象初始化过程复杂**：如果对象的初始化过程包含大量计算或依赖其他对象，可以使用原型模式来避免重新执行初始化逻辑。
+    boolean preCheck(StrategyObject strategyObject);
 
-* **保持对象状态一致性**：当需要创建一系列对象，但是这些对象之间的差异仅在于部分属性时，可以使用原型模式来保持对象状态的一致性。
+    void handleSomething(StrategyObject strategyObject);
 
-* **动态配置对象**：原型模式允许在运行时动态配置对象，通过克隆现有对象并进行适当的修改，可以快速创建具有不同配置的对象。
+    void afterHandle(StrategyObject strategyObject);
+}
 
-* **减少子类的构造**：当一个系统中存在大量相似对象，但它们区别在于属性的不同组合时，可以使用原型模式来减少子类的构造，通过克隆原型对象来创建新对象。
+```
 
-* **保护对象的数据**：原型模式可以用于保护对象的数据，因为克隆操作不会影响原型对象的数据，从而避免对原始对象的修改。
+```java
+package com.yuwei.strategy;
 
-## 实现方式
-对于不同的应用场景，我们需要合理的选择实现方式。一种是浅拷贝，另一种是深拷贝。详见
-[Java深拷贝与浅拷贝](http://112.124.58.32/java/javacopy.html)。
+public class MonStrategy implements Strategy{
+
+    @Override
+    public boolean preCheck(StrategyObject strategyObject) {
+        return false;
+    }
+
+    @Override
+    public void handleSomething(StrategyObject strategyObject) {
+        System.out.println("正在处理"+strategyObject.getName());
+    }
+
+    @Override
+    public void afterHandle(StrategyObject strategyObject) {
+
+    }
+}
+
+```
+
+```java
+package com.yuwei.strategy;
+
+public class ThuStrategy implements Strategy{
+    @Override
+    public boolean preCheck(StrategyObject strategyObject) {
+        return false;
+    }
+
+    @Override
+    public void handleSomething(StrategyObject strategyObject) {
+        System.out.println("正在处理"+strategyObject.getName());
+    }
+
+    @Override
+    public void afterHandle(StrategyObject strategyObject) {
+
+    }
+}
+
+```
+
+```java
+package com.yuwei.strategy;
+
+public class ThrStrategy implements Strategy{
+    @Override
+    public boolean preCheck(StrategyObject strategyObject) {
+        return false;
+    }
+
+    @Override
+    public void handleSomething(StrategyObject strategyObject) {
+        System.out.println("正在处理"+strategyObject.getName());
+    }
+
+    @Override
+    public void afterHandle(StrategyObject strategyObject) {
+
+    }
+}
+
+```
+
+```java
+package com.yuwei.strategy;
+
+public class StrategyObject {
+
+    private String name;
+
+    private String address;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}
+
+```
+
+```java
+package com.yuwei.strategy;
+
+public class Context {
+    private Strategy strategy;
+
+    public Context(Strategy strategy){
+        this.strategy = strategy;
+    }
+
+    public void executeStrategy(StrategyObject strategyObject){
+        strategy.preCheck(strategyObject);
+        strategy.handleSomething(strategyObject);
+        strategy.afterHandle(strategyObject);
+    }
+}
+
+```
+
+```java
+package com.yuwei.strategy;
+
+public class StrategyTest {
+    public static void main(String[] args) {
+        MonStrategy monStrategy = new MonStrategy();
+        StrategyObject strategyObject = new StrategyObject();
+        strategyObject.setName("周一");
+        Context context = new Context(monStrategy);
+        context.executeStrategy(strategyObject);
+    }
+}
+
+```
+

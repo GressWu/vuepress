@@ -70,6 +70,10 @@ module.exports = {
                 {
                     text: '建造者模式',
                     link: '/designpattern/builder'
+                },
+                {
+                    text: '策略模式',
+                    link: '/designpattern/strategy'
                 }
             ]
         },
