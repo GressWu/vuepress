@@ -74,6 +74,14 @@ module.exports = {
                 {
                     text: '策略模式',
                     link: '/designpattern/strategy'
+                },
+                {
+                    text: '观察者模式',
+                    link: '/designpattern/observer'
+                },
+                {
+                    text: '责任链模式',
+                    link: '/designpattern/chain'
                 }
             ]
         },
