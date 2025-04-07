@@ -177,6 +177,14 @@ module.exports = {
                     text: '线程的阻塞',
                     link: '/java/threadjoin'
                 },
+                {
+                    text: 'Java中的args',
+                    link: '/java/javaargs'
+                },
+                {
+                    text: 'JVM性能分析',
+                    link: '/java/jvmanalysis'
+                }
             ]
         },
         {

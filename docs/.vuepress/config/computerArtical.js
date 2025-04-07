@@ -176,6 +176,10 @@ module.exports = {
                 {
                     text: 'Shell编程',
                     link: '/computerbasic/shell/'
+                },
+                {
+                    text: 'shell脚本实现应用的自动启停',
+                    link: '/computerbasic/shellautostart/'
                 }
             ]
         },
